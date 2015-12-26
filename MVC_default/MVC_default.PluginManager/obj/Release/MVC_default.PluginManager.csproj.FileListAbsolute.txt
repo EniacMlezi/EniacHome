@@ -1,0 +1,10 @@
+C:\Users\larsg\Documents\Visual Studio 2015\Projects\MVC_default\MVC_default.PluginManager\bin\Release\MVC_default.PluginManager.dll
+C:\Users\larsg\Documents\Visual Studio 2015\Projects\MVC_default\MVC_default.PluginManager\bin\Release\MVC_default.PluginManager.pdb
+C:\Users\larsg\Documents\Visual Studio 2015\Projects\MVC_default\MVC_default.PluginManager\bin\Release\BoC.Web.Mvc.PrecompiledViews.dll
+C:\Users\larsg\Documents\Visual Studio 2015\Projects\MVC_default\MVC_default.PluginManager\bin\Release\ModuleInterface.dll
+C:\Users\larsg\Documents\Visual Studio 2015\Projects\MVC_default\MVC_default.PluginManager\bin\Release\System.Web.WebPages.dll
+C:\Users\larsg\Documents\Visual Studio 2015\Projects\MVC_default\MVC_default.PluginManager\bin\Release\ModuleInterface.pdb
+C:\Users\larsg\Documents\Visual Studio 2015\Projects\MVC_default\MVC_default.PluginManager\bin\Release\System.Web.WebPages.xml
+C:\Users\larsg\Documents\Visual Studio 2015\Projects\MVC_default\MVC_default.PluginManager\obj\Release\MVC_default.PluginManager.csprojResolveAssemblyReference.cache
+C:\Users\larsg\Documents\Visual Studio 2015\Projects\MVC_default\MVC_default.PluginManager\obj\Release\MVC_default.PluginManager.dll
+C:\Users\larsg\Documents\Visual Studio 2015\Projects\MVC_default\MVC_default.PluginManager\obj\Release\MVC_default.PluginManager.pdb

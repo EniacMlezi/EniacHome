@@ -1,0 +1,5 @@
+C:\Users\larsg\Documents\Visual Studio 2015\Projects\MVC_default\ModuleInterface\bin\Debug\ModuleInterface.dll
+C:\Users\larsg\Documents\Visual Studio 2015\Projects\MVC_default\ModuleInterface\bin\Debug\ModuleInterface.pdb
+C:\Users\larsg\Documents\Visual Studio 2015\Projects\MVC_default\ModuleInterface\obj\Debug\ModuleInterface.dll
+C:\Users\larsg\Documents\Visual Studio 2015\Projects\MVC_default\ModuleInterface\obj\Debug\ModuleInterface.pdb
+C:\Users\larsg\Documents\Visual Studio 2015\Projects\MVC_default\ModuleInterface\obj\Debug\ModuleInterface.csprojResolveAssemblyReference.cache

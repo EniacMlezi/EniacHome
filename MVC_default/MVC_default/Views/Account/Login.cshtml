@@ -1,0 +1,54 @@
+﻿@model List<MVC_default.Models.LoginViewUserModel>
+@using Microsoft.AspNet.Identity
+
+@for (int i = 0; i < Model.Count(); i++)
+{
+    <p>
+        <strong>@Model[i].UserName</strong>
+        @if (Request.IsAuthenticated && Model[i].UserName == User.Identity.GetUserName())
+        {
+            using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-form" }))
+            {
+                @Html.AntiForgeryToken()
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        @Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+                    </li>
+                    <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+                </ul>
+            }
+        }
+        else
+        {
+            using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { id = "userForm " + @i, role = "form" }))
+            {
+                @Html.HiddenFor(m => m[i].Id)
+                @Html.HiddenFor(m => m[i].UserName)
+                @Html.Hidden("UserIndex", i)
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(m => m[i].Password, new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.PasswordFor(m => m[i].Password, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(m => m[i].Password, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <div class="checkbox">
+                            @Html.CheckBoxFor(m => m[i].RememberMe)
+                            @Html.LabelFor(m => m[i].RememberMe)
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <a class="btn btn-default" href="javascript:document.getElementById('userForm @i').submit()">Log in</a>
+                    </div>
+                </div>
+            }
+        }
+    </p>
+}
