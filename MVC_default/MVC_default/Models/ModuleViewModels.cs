@@ -6,6 +6,12 @@ using System.Web;
 
 namespace MVC_default.Models
 {
+    public class PluginAndModuleListViewModule
+    {
+        public List<PluginListViewModel> Plugins { get; set; }
+        public List<ModuleListViewModel> Modules { get; set; }
+    }
+
     public class PluginListViewModel
     {
         public string Title { get; set; }
@@ -15,8 +21,7 @@ namespace MVC_default.Models
 
     public class ModuleListViewModel
     {
-        public string Name { get; set; }
-
-        public string Version { get; set; }
+        public string Name { get; set; }   
+        public string IP { get; set; }
     }
 }

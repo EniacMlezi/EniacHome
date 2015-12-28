@@ -34,9 +34,6 @@
       <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="ModuleInterface">
-      <HintPath>..\..\MVC_default\ModuleInterface\bin\Debug\ModuleInterface.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
@@ -82,7 +79,12 @@
       <DependentUpon>Index.cshtml</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\PluginInterface\PluginInterface.csproj">
+      <Project>{ea6b1c51-0802-4c4c-8670-dd22a547dcd3}</Project>
+      <Name>PluginInterface</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
     <EmbeddedResource Include="Views\Widget\Index.cshtml">

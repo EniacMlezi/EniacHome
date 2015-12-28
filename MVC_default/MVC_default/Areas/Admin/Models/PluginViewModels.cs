@@ -22,6 +22,6 @@ namespace MVC_default.Areas.Admin.Models
         public string Name { get; set; }
         public string Author { get; set; }
         public string Version { get; set; }
-        public string EntryControllerName { get; set; }
+        public string EntryAreaName { get; set; }
     }
 }

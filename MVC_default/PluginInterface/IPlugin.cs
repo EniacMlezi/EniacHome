@@ -27,6 +27,6 @@ namespace PluginInterface
         /// <summary>
         /// Entry controller name
         /// </summary>
-        string EntryControllerName { get; }
+        string EntryAreaName { get; }
     }
 }

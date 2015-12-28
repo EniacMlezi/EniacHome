@@ -27,7 +27,7 @@ namespace MVC_default.Plugins.TemperatureModule
         {
             get { return new Version(1, 0, 0, 0); }
         }
-        public string EntryControllerName
+        public string EntryAreaName
         {
             get { return "Temperature"; }
         }

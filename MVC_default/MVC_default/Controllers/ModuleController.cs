@@ -8,6 +8,8 @@ using MVC_default.Models;
 using System.ComponentModel.Composition;
 using PluginInterface;
 using MVC_default.PluginManager;
+using System.Collections;
+using MVC_default.ModuleManager;
 
 namespace MVC_default.Controllers
 {
@@ -22,11 +24,12 @@ namespace MVC_default.Controllers
 
         public ActionResult List()
         {
-            IEnumerable<IPlugin> modules = PluginManager.PluginManager.Current.GetPlugins();
-            
-            IEnumerable<PluginListViewModel> model = modules.Select(x => new PluginListViewModel { Title = x.Title, Author = x.Author, Version = x.Version.ToString() });
+            IEnumerable<IPlugin> plugins = PluginManager.PluginManager.Current.GetPlugins();           
+            IEnumerable<PluginListViewModel> pModel = plugins.Select(x => new PluginListViewModel { Title = x.Title, Author = x.Author, Version = x.Version.ToString() });
 
-            return View(model);
+            IEnumerable<Module> modules = ModuleManager.ModuleManager.Current.GetModules();
+            IEnumerable<ModuleListViewModel> mModel = modules.Select(x => new ModuleListViewModel { IP = x.IP.ToString(), Name = x.Name });
+            return View(new PluginAndModuleListViewModule { Plugins = pModel.ToList(), Modules = mModel.ToList() });
         }
     }
 }

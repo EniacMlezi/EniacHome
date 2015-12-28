@@ -33,7 +33,7 @@ namespace MVC_default.Areas.Admin.Controllers
                 Name = module.Name,
                 Author = module.Author,
                 Version = module.Version.ToString(),
-                EntryControllerName = module.EntryControllerName};
+                EntryAreaName = module.EntryAreaName};
             return View(model);
         }
 
