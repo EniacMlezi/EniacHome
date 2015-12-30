@@ -10,6 +10,7 @@ C:\Users\larsg\Documents\Visual Studio 2015\Projects\MVC_default\MVC_default.Plu
 C:\Users\larsg\Documents\Visual Studio 2015\Projects\MVC_default\MVC_default.PluginManager\obj\Debug\MVC_default.PluginManager.pdb
 C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\MVC_default\MVC_default.PluginManager\bin\Debug\MVC_default.PluginManager.dll
 C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\MVC_default\MVC_default.PluginManager\bin\Debug\MVC_default.PluginManager.pdb
+C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\MVC_default\MVC_default.PluginManager\bin\Debug\BoC.Web.Mvc.PrecompiledViews.dll
 C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\MVC_default\MVC_default.PluginManager\bin\Debug\ModuleInterface.dll
 C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\MVC_default\MVC_default.PluginManager\bin\Debug\System.Web.WebPages.dll
 C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\MVC_default\MVC_default.PluginManager\bin\Debug\ModuleInterface.pdb

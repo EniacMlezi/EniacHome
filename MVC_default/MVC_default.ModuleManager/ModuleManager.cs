@@ -27,19 +27,9 @@ namespace MVC_default.ModuleManager
             return Modules.Select(m => m.Key).ToList();
         }
 
-        public Dictionary<Module, IPlugin> GetModulesDictionary()
-        {
-            return Modules;
-        }
-
         public Module GetModule(string name)
         {
             return GetModules().Where(m => m.Name == name).FirstOrDefault();
-        }
-
-        public KeyValuePair<Module, IPlugin> GetModuleDictionary(string ModuleName)
-        {
-            return Modules.Where(m => m.Key.Name == ModuleName).FirstOrDefault();
         }
 
         public bool Add(Module module, string plugin)
