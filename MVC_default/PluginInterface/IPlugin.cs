@@ -25,15 +25,8 @@ namespace PluginInterface
         Version Version { get; }
 
         /// <summary>
-        /// Entry area name
-        /// </summary>
-        string EntryAreaName { get; }
-
-        /// <summary>
         /// Entry controller name
         /// </summary>
-        string WidgetWidth { get; }
-
-
+        string EntryAreaName { get; }
     }
 }
