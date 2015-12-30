@@ -31,5 +31,10 @@ namespace MVC_default.Plugins.TemperatureModule
         {
             get { return "Temperature"; }
         }
+
+        public string WidgetWidth
+        {
+            get { return "4"; }
+        }
     }
 }
