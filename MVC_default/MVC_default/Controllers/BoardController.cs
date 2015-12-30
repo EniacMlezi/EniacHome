@@ -16,7 +16,9 @@ namespace MVC_default.Controllers
         {
             System.Net.IPAddress localIP = System.Net.IPAddress.Parse("127.0.0.1");
             var Modules = ModuleManager.ModuleManager.Current.GetModulesDictionary();
-            var widgets = Modules.Select(x => new WidgetViewModel { Title = x.Key.Name, WidgetAreaName = x.Value.EntryAreaName, IP = x.Key.IP.ToString() }).ToList();
+            Modules.Add(new Module { IP = System.Net.IPAddress.Parse("127.0.0.1"), Name = "Temperatuur" }, PluginManager.PluginManager.Current.GetPlugin("TemperatureModule"));
+            Modules.Add(new Module { IP = System.Net.IPAddress.Parse("127.0.0.1"), Name = "Template" }, PluginManager.PluginManager.Current.GetPlugin("TemplatePlugin"));
+            var widgets = Modules.Select(x => new WidgetViewModel { Title = x.Key.Name, WidgetAreaName = x.Value.EntryAreaName, IP = x.Key.IP.ToString(), Width = x.Value.WidgetWidth }).ToList();
 
             return View(new WidgetListViewModel { Widgets = widgets });        
         }

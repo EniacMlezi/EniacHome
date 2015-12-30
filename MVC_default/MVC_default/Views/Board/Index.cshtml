@@ -1,38 +1,45 @@
 ﻿@model MVC_default.Models.WidgetListViewModel
 
 <div class="row">
-    <h2>My Dashboard</h2>
+    <h2>Dashboard</h2>
     <hr />
 </div>
 
 @foreach (var widget in Model.Widgets)
 {
-    <div class="col-md-4">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h2> @widget.Title </h2>
-            </div>
-            <div class="panel-body">
-                @{
-                    try
-                    {
-                        Html.RenderAction("Index", "Widget", new { area = widget.WidgetAreaName });
-                    }
-                    catch (Exception ex)
-                    {
-                        @:Invalid Plugin!
-
-                        if (Request.GetOwinContext().Authentication.User.IsInRole("Administrator"))
-                        {
-                            @ex.ToString();
-                        }
-                    }
-
-                }
-            </div>
-            <div class="panel-footer">
-                @widget.IP
+<div class="col-md-@widget.Width">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-md-10">
+                    <h3> @widget.Title </h3>
+                </div>
+                <div class="col-md-2">
+                    <h3><a href=@Url.Action("Index", "Settings", new { area = widget.WidgetAreaName})><span class="glyphicon glyphicon-cog pull-right"></span></a></h3>
+                </div>
             </div>
         </div>
+        <div class="panel-body">
+            @{
+            try
+            {
+            Html.RenderAction("Index", "Widget", new { area = widget.WidgetAreaName });
+            }
+            catch (Exception ex)
+            {
+            @:Invalid Plugin!
+
+            if (Request.GetOwinContext().Authentication.User.IsInRole("Administrator"))
+            {
+            @ex.ToString();
+            }
+            }
+
+            }
+        </div>
+        <div class="panel-footer">
+            @widget.IP
+        </div>
     </div>
+</div>
                     }

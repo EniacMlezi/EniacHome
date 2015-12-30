@@ -82,15 +82,22 @@ namespace MVC_default.PluginManager
 
             foreach (var assembly in assemblies)
             {
-                Type type = assembly.GetTypes().Where(t => t.GetInterface(typeof(IPlugin).Name) != null).FirstOrDefault();
-                if (type != null)
+                try
                 {
-                    //Add the plugin as a reference to the application
-                    BuildManager.AddReferencedAssembly(assembly);
+                    Type type = assembly.GetTypes().Where(t => t.GetInterface(typeof(IPlugin).Name) != null).FirstOrDefault();
+                    if (type != null)
+                    {
+                        //Add the plugin as a reference to the application
+                        BuildManager.AddReferencedAssembly(assembly);
 
-                    //Add the modules to the PluginManager to manage them later
-                    var module = (IPlugin)Activator.CreateInstance(type);
-                    PluginManager.Current.Plugins.Add(module, assembly);
+                        //Add the modules to the PluginManager to manage them later
+                        var plugin = (IPlugin)Activator.CreateInstance(type);
+                        PluginManager.Current.Plugins.Add(plugin, assembly);
+                    }
+                }
+                catch
+                {
+                  //log
                 }
             }
         }
