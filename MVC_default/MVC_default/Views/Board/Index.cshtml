@@ -1,0 +1,38 @@
+﻿@model MVC_default.Models.WidgetListViewModel
+
+<div class="row">
+    <h2>My Dashboard</h2>
+    <hr />
+</div>
+
+@foreach (var widget in Model.Widgets)
+{
+    <div class="col-md-4">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h2> @widget.Title </h2>
+            </div>
+            <div class="panel-body">
+                @{
+                    try
+                    {
+                        Html.RenderAction("Index", "Widget", new { area = widget.WidgetAreaName });
+                    }
+                    catch (Exception ex)
+                    {
+                        @:Invalid Plugin!
+
+                        if (Request.GetOwinContext().Authentication.User.IsInRole("Administrator"))
+                        {
+                            @ex.ToString();
+                        }
+                    }
+
+                }
+            </div>
+            <div class="panel-footer">
+                @widget.IP
+            </div>
+        </div>
+    </div>
+                    }
