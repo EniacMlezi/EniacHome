@@ -8,11 +8,11 @@ using System.Reflection;
 
 namespace MVC_default.Plugins.TemperatureModule
 {
-    public class TemperatureModule : IPlugin
+    public class TemplatePlugin : IPlugin
     {
         public string Title
         {
-            get { return "Temperature"; }
+            get { return "Template"; }
         }
         public string Name
         {
@@ -29,12 +29,12 @@ namespace MVC_default.Plugins.TemperatureModule
         }
         public string EntryAreaName
         {
-            get { return "Temperature"; }
+            get { return "Template"; }
         }
 
         public string WidgetWidth
         {
-            get { return "4"; }
+            get { return "6"; }
         }
     }
 }
