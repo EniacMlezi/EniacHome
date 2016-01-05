@@ -33,13 +33,15 @@ namespace MVC_default.Areas.Admin.Controllers
                 Name = module.Name,
                 Author = module.Author,
                 Version = module.Version.ToString(),
-                EntryAreaName = module.EntryAreaName};
+                EntryAreaName = module.EntryAreaName
+            };
             return View(model);
         }
 
         public ActionResult Delete(string Name)
         {
             System.IO.File.Delete(Server.MapPath("~/plugins/" + Name + ".dll"));
+            ModuleManager.ModuleManager.Current.Delete(PluginManager.PluginManager.Current.GetPlugin(Name));
             PluginManager.PluginManager.Current.Reload();
             return RedirectToAction("List");
         }

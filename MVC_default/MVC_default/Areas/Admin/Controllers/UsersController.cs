@@ -20,7 +20,7 @@ namespace MVC_default.Areas.Admin.Controllers
     }
     
     [Authorize(Roles = "Administrator, Moderator")]
-    public class UserController : Controller
+    public class UsersController : Controller
     {
         private ApplicationUserManager _userManager;
         public ApplicationUserManager UserManager

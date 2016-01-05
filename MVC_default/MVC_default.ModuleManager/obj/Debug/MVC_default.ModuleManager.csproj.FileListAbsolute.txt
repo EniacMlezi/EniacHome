@@ -3,10 +3,9 @@ C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\MVC_default\MVC_default.Mo
 C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\MVC_default\MVC_default.ModuleManager\bin\Debug\ModuleInterface.dll
 C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\MVC_default\MVC_default.ModuleManager\bin\Debug\MVC_default.PluginManager.dll
 C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\MVC_default\MVC_default.ModuleManager\bin\Debug\BoC.Web.Mvc.PrecompiledViews.dll
-C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\MVC_default\MVC_default.ModuleManager\bin\Debug\System.Web.WebPages.dll
 C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\MVC_default\MVC_default.ModuleManager\bin\Debug\MVC_default.PluginManager.pdb
 C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\MVC_default\MVC_default.ModuleManager\bin\Debug\ModuleInterface.pdb
-C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\MVC_default\MVC_default.ModuleManager\bin\Debug\System.Web.WebPages.xml
 C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\MVC_default\MVC_default.ModuleManager\obj\Debug\MVC_default.ModuleManager.csprojResolveAssemblyReference.cache
 C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\MVC_default\MVC_default.ModuleManager\obj\Debug\MVC_default.ModuleManager.dll
 C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\MVC_default\MVC_default.ModuleManager\obj\Debug\MVC_default.ModuleManager.pdb
+C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\MVC_default\MVC_default.ModuleManager\bin\Debug\Microsoft.Web.Administration.dll

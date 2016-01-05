@@ -73,10 +73,10 @@ namespace MVC_default.Controllers
         public async Task<ActionResult> Login(List<LoginViewUserModel> model, string UserIndex , string returnUrl)
         {
             int userIndex = int.Parse(UserIndex);
-            if (!ModelState.IsValid)
-            {
-                return View(model);
-            }
+            //if (!ModelState.IsValid)
+            //{
+            //    return View(model);
+            //}
 
            ApplicationUser user = await UserManager.FindByNameAsync(model[userIndex].UserName);
             if (user != null)

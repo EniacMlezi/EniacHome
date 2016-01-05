@@ -1,11 +1,12 @@
-﻿using System;
+﻿using MVC_default.ModuleManager;
+using System;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Threading;
 
 // State object for reading client data asynchronously
-namespace MVC_default.Modules
+namespace MVC_default.ModuleManager
 {
     public class StateObject
     {
@@ -80,6 +81,6 @@ namespace MVC_default.Modules
             // Create the state object.
             StateObject state = new StateObject();
             state.workSocket = handler;
-        }       
+        }
     }
 }

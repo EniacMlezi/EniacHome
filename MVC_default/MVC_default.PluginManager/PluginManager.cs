@@ -4,7 +4,8 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Web;
 using PluginInterface;
-
+using System.Diagnostics;
+using Microsoft.Web.Administration;
 
 namespace MVC_default.PluginManager
 {
@@ -32,10 +33,23 @@ namespace MVC_default.PluginManager
         {
             return GetPlugins().Where(m => m.Name == name).FirstOrDefault();
         }
-
+        
         public void Reload()
         {
-            System.Web.HttpRuntime.UnloadAppDomain();
+            var appHostConfigFile = @"\\" + Environment.MachineName + @"\c$\windows\system32\inetsrv\config\applicationHost.config";
+            ServerManager serverManager = ServerManager.OpenRemote(Environment.MachineName);
+            ApplicationPool appPool = serverManager.ApplicationPools["EniacHome"];
+            if (appPool != null)
+            {
+                if (appPool.State == ObjectState.Stopped)
+                {
+                    appPool.Start();
+                }
+                else
+                {
+                    appPool.Recycle();
+                }
+            }
         }
     }
 }

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using MVC_default.Modules;
 using MVC_default.Models;
 using System.ComponentModel.Composition;
 using PluginInterface;
