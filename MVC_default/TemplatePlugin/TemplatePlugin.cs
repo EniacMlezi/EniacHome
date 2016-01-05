@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using PluginInterface;
 using System.Reflection;
 
-namespace MVC_default.Plugins.TemperatureModule
+namespace MVC_default.Plugins.TemplatePlugin
 {
     public class TemplatePlugin : IPlugin
     {

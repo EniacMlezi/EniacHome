@@ -8,4 +8,3 @@ C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\MVC_default\MVC_default.Mo
 C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\MVC_default\MVC_default.ModuleManager\obj\Debug\MVC_default.ModuleManager.csprojResolveAssemblyReference.cache
 C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\MVC_default\MVC_default.ModuleManager\obj\Debug\MVC_default.ModuleManager.dll
 C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\MVC_default\MVC_default.ModuleManager\obj\Debug\MVC_default.ModuleManager.pdb
-C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\MVC_default\MVC_default.ModuleManager\bin\Debug\Microsoft.Web.Administration.dll

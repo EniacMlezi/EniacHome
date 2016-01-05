@@ -18,7 +18,7 @@ namespace MVC_default.PluginManager
             string pluginsTempPath = HostingEnvironment.MapPath("~/plugins/temp");
 
             if (pluginsPath == null || pluginsTempPath == null)
-	            throw new DirectoryNotFoundException("plugins");
+                throw new DirectoryNotFoundException("plugins");
 
             PluginFolder = new DirectoryInfo(pluginsPath);
             TempPluginFolder = new DirectoryInfo(pluginsTempPath);
@@ -41,7 +41,7 @@ namespace MVC_default.PluginManager
         /// Initialize method that registers all plugins
         /// </summary>
         public static void InitializePlugins()
-        {            
+        {
             Directory.CreateDirectory(TempPluginFolder.FullName);
 
             //clear out plugins
@@ -53,10 +53,10 @@ namespace MVC_default.PluginManager
                 }
                 catch (Exception)
                 {
-                    
+
                 }
-                
-            }            
+
+            }
 
             //copy files
             foreach (var plug in PluginFolder.GetFiles("*.dll", SearchOption.AllDirectories))
@@ -72,34 +72,27 @@ namespace MVC_default.PluginManager
                 }
             }
 
-            // * This will put the plugin assemblies in the 'Load' context
-            // This works but requires a 'probing' folder be defined in the web.config
-            // eg: <probing privatePath="plugins/temp" />
-            var assemblies = TempPluginFolder.GetFiles("*.dll", SearchOption.AllDirectories)
-                    .Select(x => AssemblyName.GetAssemblyName(x.FullName))
-                    .Select(x => Assembly.Load(x.FullName));
-            
+           // *This will put the plugin assemblies in the 'Load' context
+           //This works but requires a 'probing' folder be defined in the web.config
+           //eg: < probing privatePath = "plugins/temp" />
+           var assemblies = TempPluginFolder.GetFiles("*.dll", SearchOption.AllDirectories)
+                   .Select(x => AssemblyName.GetAssemblyName(x.FullName))
+                   .Select(x => Assembly.Load(x.FullName));
 
             foreach (var assembly in assemblies)
             {
-                try
+                Type type = assembly.GetTypes().Where(t => t.GetInterface(typeof(IPlugin).Name) != null).FirstOrDefault();
+                if (type != null)
                 {
-                    Type type = assembly.GetTypes().Where(t => t.GetInterface(typeof(IPlugin).Name) != null).FirstOrDefault();
-                    if (type != null)
-                    {
-                        //Add the plugin as a reference to the application
-                        BuildManager.AddReferencedAssembly(assembly);
+                    //Add the plugin as a reference to the application
+                    BuildManager.AddReferencedAssembly(assembly);
 
-                        //Add the modules to the PluginManager to manage them later
-                        var plugin = (IPlugin)Activator.CreateInstance(type);
-                        PluginManager.Current.Plugins.Add(plugin, assembly);
-                    }
-                }
-                catch
-                {
-                  //log
+                    //Add the modules to the PluginManager to manage them later
+                    var plugin = (IPlugin)Activator.CreateInstance(type);
+                    PluginManager.Current.Plugins.Add(plugin, assembly);
                 }
             }
         }
     }
 }
+

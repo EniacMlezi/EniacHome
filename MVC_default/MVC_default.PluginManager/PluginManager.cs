@@ -36,20 +36,20 @@ namespace MVC_default.PluginManager
         
         public void Reload()
         {
-            var appHostConfigFile = @"\\" + Environment.MachineName + @"\c$\windows\system32\inetsrv\config\applicationHost.config";
-            ServerManager serverManager = ServerManager.OpenRemote(Environment.MachineName);
-            ApplicationPool appPool = serverManager.ApplicationPools["EniacHome"];
-            if (appPool != null)
-            {
-                if (appPool.State == ObjectState.Stopped)
-                {
-                    appPool.Start();
-                }
-                else
-                {
-                    appPool.Recycle();
-                }
-            }
+        //    var appHostConfigFile = @"\\" + Environment.MachineName + @"\c$\windows\system32\inetsrv\config\applicationHost.config";
+        //    ServerManager serverManager = ServerManager.OpenRemote(Environment.MachineName);
+        //    ApplicationPool appPool = serverManager.ApplicationPools["EniacHome"];
+        //    if (appPool != null)
+        //    {
+        //        if (appPool.State == ObjectState.Stopped)
+        //        {
+        //            appPool.Start();
+        //        }
+        //        else
+        //        {
+        //            appPool.Recycle();
+        //        }
+        //    }
         }
     }
 }

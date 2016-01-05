@@ -1,6 +1,7 @@
 ﻿using PluginInterface;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,9 +28,12 @@ namespace MVC_default.ModuleManager
             return Modules.Select(m => m.Key).ToList();
         }
 
-        public Dictionary<Module, IPlugin> GetModulesDictionary()
+        public ReadOnlyDictionary<Module, IPlugin> GetModulesDictionary()
         {
-            return Modules;
+
+            Modules.Add(new Module { IP = System.Net.IPAddress.Parse("127.0.0.1"), Name = "Temperatuur" }, PluginManager.PluginManager.Current.GetPlugin("TemperatureModule"));
+            Modules.Add(new Module { IP = System.Net.IPAddress.Parse("127.0.0.1"), Name = "Template" }, PluginManager.PluginManager.Current.GetPlugin("TemplatePlugin"));
+            return new ReadOnlyDictionary<Module, IPlugin>(Modules);
         }
 
         public Module GetModule(string name)
@@ -52,6 +56,24 @@ namespace MVC_default.ModuleManager
             }
 
             return false;
+        }
+
+        public void Delete(IPlugin plugin)
+        {
+            Delete(Modules.Where(x => x.Value.GetType() == plugin.GetType()).Select(y => y.Key));
+        }
+
+        public void Delete(IEnumerable<Module> modules)
+        {
+            foreach (var module in modules.ToList())
+            {
+                Delete(module);
+            }
+        }
+
+        public void Delete(Module module)
+        {
+            Modules.Remove(module);
         }
     }
 }
