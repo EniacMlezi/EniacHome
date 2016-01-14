@@ -47,16 +47,14 @@ namespace MVC_default.Areas.Admin.Controllers
         }
 
         [HttpPost]
-        public ActionResult Add(HttpPostedFileBase file)
+        [ValidateHeaderAntiForgeryToken]
+        public ActionResult Add()
         {
-            if (file.ContentLength > 0)
+            for (int i = 0; i < Request.Files.Count; i++)
             {
-                var fileName = Path.GetFileName(file.FileName);
-                var path = Path.Combine(Server.MapPath("~/plugins/"), fileName);
-                file.SaveAs(path);
+                HttpPostedFileBase file = Request.Files[i];
+                file.SaveAs(Server.MapPath("~/plugins/") + file.FileName);
             }
-
-            PluginManager.PluginManager.Current.Reload();
 
             return RedirectToAction("List");
         }

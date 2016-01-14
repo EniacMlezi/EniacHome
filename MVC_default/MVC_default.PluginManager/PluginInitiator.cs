@@ -84,9 +84,9 @@ namespace MVC_default.PluginManager
                 Type type = assembly.GetTypes().Where(t => t.GetInterface(typeof(IPlugin).Name) != null).FirstOrDefault();
                 if (type != null)
                 {
+                    File.AppendAllText(@"C:\log.txt", System.DateTime.Now.ToString() + " -> added: " + assembly.FullName + Environment.NewLine);
                     //Add the plugin as a reference to the application
                     BuildManager.AddReferencedAssembly(assembly);
-
                     //Add the modules to the PluginManager to manage them later
                     var plugin = (IPlugin)Activator.CreateInstance(type);
                     PluginManager.Current.Plugins.Add(plugin, assembly);

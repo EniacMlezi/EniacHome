@@ -6,6 +6,10 @@ using System.Web;
 using PluginInterface;
 using System.Diagnostics;
 using Microsoft.Web.Administration;
+using System.Threading;
+using System.IO;
+using System.Runtime.InteropServices;
+using System.Web.Hosting;
 
 namespace MVC_default.PluginManager
 {
@@ -36,20 +40,18 @@ namespace MVC_default.PluginManager
         
         public void Reload()
         {
-        //    var appHostConfigFile = @"\\" + Environment.MachineName + @"\c$\windows\system32\inetsrv\config\applicationHost.config";
-        //    ServerManager serverManager = ServerManager.OpenRemote(Environment.MachineName);
-        //    ApplicationPool appPool = serverManager.ApplicationPools["EniacHome"];
-        //    if (appPool != null)
-        //    {
-        //        if (appPool.State == ObjectState.Stopped)
-        //        {
-        //            appPool.Start();
-        //        }
-        //        else
-        //        {
-        //            appPool.Recycle();
-        //        }
-        //    }
+            using (ServerManager iisManager = new ServerManager())
+            {
+                SiteCollection sites = iisManager.Sites;
+                foreach (Site site in sites)
+                {
+                    if (site.Name == HostingEnvironment.ApplicationHost.GetSiteName())
+                    {
+                        iisManager.ApplicationPools[site.Applications["/"].ApplicationPoolName].Recycle();
+                        break;
+                    }
+                }
+            }
         }
     }
 }
