@@ -1,45 +1,109 @@
 ﻿@model MVC_default.Models.WidgetListViewModel
+@section scripts{
+    <script language="JavaScript" type="text/javascript" src="~/Scripts/jquery-2.1.4.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="~/Scripts/jquery-ui.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="~/Scripts/lodash.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="~/Scripts/gridstack.js"></script>
+    <script>
+        $(function () {
+            var options = {
+                float: true,
+                resizable: { disabled: true },
+                animate: true
+            };
+            $('.grid-stack').gridstack(options);
+        });
+    </script>
+}
+<link rel="stylesheet" type="text/css" href="~/Content/Dashboard.css">
+<link rel="stylesheet" type="text/css" href="~/Content/gridstack.css">
 
-<div class="row">
-    <h2>Dashboard</h2>
-    <hr />
-</div>
+<h2>Dashboard</h2>
+<hr />
+<div class="grid-stack">
+    <div class="grid-stack-item"
+         data-gs-x="0" data-gs-y="0"
+         data-gs-width="4" data-gs-height="2">
+        <div class="grid-stack-item-content">Hello</div>
+    </div>
+    <div class="grid-stack-item">
+        <div class="grid-stack-item-content">Hello</div>
+    </div>
 
-@foreach (var widget in Model.Widgets)
-{
-<div class="col-md-@widget.Width">
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <div class="row">
-                <div class="col-md-10">
-                    <h3> @widget.Title </h3>
-                </div>
-                <div class="col-md-2">
-                    <h3><a href=@Url.Action("Index", "Settings", new { area = widget.WidgetAreaName})><span class="glyphicon glyphicon-cog pull-right"></span></a></h3>
+    @foreach (var widget in Model.Widgets)
+    {
+        <div class="grid-stack-item">
+            <div class="grid-stack-item-content">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-md-10">
+                                <h3> @widget.Title </h3>
+                            </div>
+                            <div class="col-md-2">
+                                <h3><a href=@Url.Action("Index", "Settings", new { area = widget.WidgetAreaName })><span class="glyphicon glyphicon-cog pull-right"></span></a></h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        @{
+                            try
+                            {
+                                Html.RenderAction("Index", "Widget", new { area = widget.WidgetAreaName });
+                            }
+                            catch (Exception ex)
+                            {
+                                @:Invalid Plugin!
+
+                                if (Request.GetOwinContext().Authentication.User.IsInRole("Administrator"))
+                                {
+                                    @ex.ToString();
+                                }
+                            }
+
+                        }
+                    </div>
+                    <div class="panel-footer">
+                        @widget.IP
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="panel-body">
-            @{
-            try
-            {
-            Html.RenderAction("Index", "Widget", new { area = widget.WidgetAreaName });
-            }
-            catch (Exception ex)
-            {
-            @:Invalid Plugin!
-
-            if (Request.GetOwinContext().Authentication.User.IsInRole("Administrator"))
-            {
-            @ex.ToString();
-            }
-            }
-
-            }
-        </div>
-        <div class="panel-footer">
-            @widget.IP
-        </div>
-    </div>
+    }
 </div>
+
+@*<div class="col-md-@widget.Size widget">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <div class="row">
+                    <div class="col-md-10">
+                        <h3> @widget.Title </h3>
+                    </div>
+                    <div class="col-md-2">
+                        <h3><a href=@Url.Action("Index", "Settings", new { area = widget.WidgetAreaName })><span class="glyphicon glyphicon-cog pull-right"></span></a></h3>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-body">
+                @{
+                    try
+                    {
+                        Html.RenderAction("Index", "Widget", new { area = widget.WidgetAreaName });
                     }
+                    catch (Exception ex)
+                    {
+                        @:Invalid Plugin!
+
+                        if (Request.GetOwinContext().Authentication.User.IsInRole("Administrator"))
+                        {
+                            @ex.ToString();
+                        }
+                    }
+
+                }
+            </div>
+            <div class="panel-footer">
+                @widget.IP
+            </div>
+        </div>
+    </div>*@

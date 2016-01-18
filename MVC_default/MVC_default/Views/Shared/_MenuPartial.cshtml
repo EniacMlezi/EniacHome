@@ -1,4 +1,5 @@
 ﻿@using Microsoft.AspNet.Identity
+
 <li class="@(ViewContext.RouteData.Values["Controller"].ToString() == "Home"  && !Request.Url.ToString().Contains("Admin") && !(ViewContext.RouteData.Values["Action"].ToString() == "Contact") && !(ViewContext.RouteData.Values["Action"].ToString() == "About") ? "active" : "")">
     <a href=@Url.Action("Index", "Home", new { area = ""})><span class="glyphicon glyphicon-home pull-left"></span>Home</a>
 </li>
@@ -52,4 +53,3 @@
         }
     }
 </li>
-
