@@ -37,7 +37,11 @@ namespace MVC_default.PluginManager
         {
             return GetPlugins().Where(m => m.Name == name).FirstOrDefault();
         }
-        
+        public IPlugin GetPlugin(IPlugin plugin)
+        {
+            return GetPlugins().Where(m => m == plugin).FirstOrDefault();
+        }
+
         public void Reload()
         {
             using (ServerManager iisManager = new ServerManager())

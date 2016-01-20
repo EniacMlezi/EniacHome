@@ -16,6 +16,9 @@ namespace MVC_default.Models
         public string WidgetAreaName { get; set; }
         public string IP { get; set; }
         
-        public string Size { get; set; }
+        public string PositionX { get; set; }
+        public string PositionY { get; set; }
+        public string Width { get; set; }
+        public string Height { get; set; }
     }
 }

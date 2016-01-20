@@ -21,18 +21,12 @@
 <h2>Dashboard</h2>
 <hr />
 <div class="grid-stack">
-    <div class="grid-stack-item"
-         data-gs-x="0" data-gs-y="0"
-         data-gs-width="4" data-gs-height="2">
-        <div class="grid-stack-item-content">Hello</div>
-    </div>
-    <div class="grid-stack-item">
-        <div class="grid-stack-item-content">Hello</div>
-    </div>
-
     @foreach (var widget in Model.Widgets)
     {
-        <div class="grid-stack-item">
+        <div class="grid-stack-item"
+             data-gs-x=@widget.PositionX data-gs-y=@widget.PositionY
+             data-gs-auto-position="true"
+             data-gs-width=@widget.Width data-gs-height="@widget.Height">
             <div class="grid-stack-item-content">
                 <div class="panel panel-default">
                     <div class="panel-heading">

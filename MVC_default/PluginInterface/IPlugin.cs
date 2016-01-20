@@ -30,10 +30,13 @@ namespace PluginInterface
         string EntryAreaName { get; }
 
         /// <summary>
-        /// Entry controller name
+        /// Widget Width
         /// </summary>
         string WidgetWidth { get; }
 
-
+        /// <summary>
+        /// Widget Height
+        /// </summary>
+        string WidgetHeight { get; }
     }
 }

@@ -27,7 +27,7 @@ namespace MVC_default.Controllers
             IEnumerable<PluginListViewModel> pModel = plugins.Select(x => new PluginListViewModel { Title = x.Title, Author = x.Author, Version = x.Version.ToString() });
 
             IEnumerable<Module> modules = ModuleManager.ModuleManager.Current.GetModules();
-            IEnumerable<ModuleListViewModel> mModel = modules.Select(x => new ModuleListViewModel { IP = x.IP.ToString(), Name = x.Name });
+            IEnumerable<ModuleListViewModel> mModel = modules.Select(x => new ModuleListViewModel { IP = "local", Name = x.Name });
             return View(new PluginAndModuleListViewModule { Plugins = pModel.ToList(), Modules = mModel.ToList() });
         }
     }

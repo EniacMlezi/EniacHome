@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using PluginInterface;
 using System.Reflection;
 
@@ -35,6 +31,11 @@ namespace MVC_default.Plugins.TemplatePlugin
         public string WidgetWidth
         {
             get { return "6"; }
+        }
+
+        public string WidgetHeight
+        {
+            get { return "3"; }
         }
     }
 }

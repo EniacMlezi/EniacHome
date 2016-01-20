@@ -19,6 +19,8 @@ namespace MVC_default
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            ModuleManager.ModuleFinder.StartListening();
         }
     }
 

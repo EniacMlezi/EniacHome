@@ -11,4 +11,3 @@ C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\MVC_default\PluginInterfac
 C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\MVC_default\PluginInterface\bin\Debug\ModuleInterface.pdb
 C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\MVC_default\PluginInterface\obj\Debug\ModuleInterface.dll
 C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\MVC_default\PluginInterface\obj\Debug\ModuleInterface.pdb
-C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\MVC_default\PluginInterface\obj\Debug\PluginInterface.csprojResolveAssemblyReference.cache
