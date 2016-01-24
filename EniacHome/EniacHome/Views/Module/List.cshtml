@@ -1,0 +1,60 @@
+﻿@model EniacHome.Models.PluginAndModuleListViewModule
+
+<div class="table-responsive col-md-4">
+    <h2>Connected Modules</h2>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Modules[0].IP)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Modules[0].Name)
+            </th>
+        </tr>
+
+        @foreach (var item in Model.Modules)
+        {
+
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IP)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+<div class="table-responsive col-md-8">
+    <h2>Plugins</h2>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Plugins[0].Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Plugins[0].Author)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Plugins[0].Version)
+            </th>
+        </tr>
+
+        @foreach (var item in Model.Plugins)
+        {
+
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Author)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Version)
+                </td>
+            </tr>
+        }
+    </table>
+</div>
