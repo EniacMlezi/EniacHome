@@ -1,0 +1,27 @@
+C:\Users\larsg\Documents\Visual Studio 2015\Projects\MVC_default\ModuleInterface\bin\Debug\ModuleInterface.dll
+C:\Users\larsg\Documents\Visual Studio 2015\Projects\MVC_default\ModuleInterface\bin\Debug\ModuleInterface.pdb
+C:\Users\larsg\Documents\Visual Studio 2015\Projects\MVC_default\ModuleInterface\obj\Debug\PluginInterface.csprojResolveAssemblyReference.cache
+C:\Users\larsg\Documents\Visual Studio 2015\Projects\MVC_default\ModuleInterface\obj\Debug\ModuleInterface.dll
+C:\Users\larsg\Documents\Visual Studio 2015\Projects\MVC_default\ModuleInterface\obj\Debug\ModuleInterface.pdb
+C:\Users\larsg\Documents\Visual Studio 2015\Projects\MVC_default\PluginInterface\bin\Debug\ModuleInterface.dll
+C:\Users\larsg\Documents\Visual Studio 2015\Projects\MVC_default\PluginInterface\bin\Debug\ModuleInterface.pdb
+C:\Users\larsg\Documents\Visual Studio 2015\Projects\MVC_default\PluginInterface\obj\Debug\ModuleInterface.dll
+C:\Users\larsg\Documents\Visual Studio 2015\Projects\MVC_default\PluginInterface\obj\Debug\ModuleInterface.pdb
+C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\MVC_default\PluginInterface\bin\Debug\ModuleInterface.dll
+C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\MVC_default\PluginInterface\bin\Debug\ModuleInterface.pdb
+C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\MVC_default\PluginInterface\obj\Debug\ModuleInterface.dll
+C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\MVC_default\PluginInterface\obj\Debug\ModuleInterface.pdb
+C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\MVC_default\PluginInterface\obj\Debug\PluginInterface.csprojResolveAssemblyReference.cache
+C:\Users\larsg\Desktop\MVC_default\PluginInterface\bin\Debug\ModuleInterface.dll
+C:\Users\larsg\Desktop\MVC_default\PluginInterface\bin\Debug\ModuleInterface.pdb
+C:\Users\larsg\Desktop\MVC_default\PluginInterface\obj\Debug\ModuleInterface.dll
+C:\Users\larsg\Desktop\MVC_default\PluginInterface\obj\Debug\ModuleInterface.pdb
+C:\Users\larsg\Desktop\EniacHome\PluginInterface\bin\Debug\ModuleInterface.dll
+C:\Users\larsg\Desktop\EniacHome\PluginInterface\bin\Debug\ModuleInterface.pdb
+C:\Users\larsg\Desktop\EniacHome\PluginInterface\obj\Debug\ModuleInterface.dll
+C:\Users\larsg\Desktop\EniacHome\PluginInterface\obj\Debug\ModuleInterface.pdb
+C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\PluginInterface\bin\Debug\ModuleInterface.dll
+C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\PluginInterface\bin\Debug\ModuleInterface.pdb
+C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\PluginInterface\obj\Debug\PluginInterface.csprojResolveAssemblyReference.cache
+C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\PluginInterface\obj\Debug\ModuleInterface.dll
+C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\PluginInterface\obj\Debug\ModuleInterface.pdb

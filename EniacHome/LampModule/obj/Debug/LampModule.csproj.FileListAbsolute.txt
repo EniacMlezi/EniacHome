@@ -1,0 +1,9 @@
+C:\Users\larsg\Desktop\LampModule\bin\Debug\LampModule.exe.config
+C:\Users\larsg\Desktop\LampModule\bin\Debug\LampModule.exe
+C:\Users\larsg\Desktop\LampModule\bin\Debug\LampModule.pdb
+C:\Users\larsg\Desktop\LampModule\obj\Debug\LampModule.csprojResolveAssemblyReference.cache
+C:\Users\larsg\Desktop\LampModule\obj\Debug\LampModule.Properties.Resources.resources
+C:\Users\larsg\Desktop\LampModule\obj\Debug\LampModule.csproj.GenerateResource.Cache
+C:\Users\larsg\Desktop\LampModule\obj\Debug\LampModule.exe
+C:\Users\larsg\Desktop\LampModule\obj\Debug\LampModule.pdb
+C:\Users\larsg\Desktop\LampModule\obj\Debug\LampModule.StateObject.resources
