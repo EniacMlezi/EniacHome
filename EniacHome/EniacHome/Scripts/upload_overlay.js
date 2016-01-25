@@ -7,7 +7,7 @@
             formData.append(files[i].name, files[i]);
         }
 
-        xhr.open('post', '@Url.Action("Add", "Plugin", new { area="Admin"})');
+        xhr.open('post', $('#url').val() );
         xhr.setRequestHeader('__RequestVerificationToken', $('[name=__RequestVerificationToken]').val())
         xhr.send(formData);
 

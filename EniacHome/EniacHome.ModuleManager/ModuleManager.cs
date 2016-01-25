@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
+using System.Net.Sockets;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace EniacHome.ModuleManager
@@ -14,6 +16,37 @@ namespace EniacHome.ModuleManager
         public ModuleManager()
         {
             Modules = new List<Module>();
+            Thread Polling = new Thread(CheckModules);
+            Polling.Start();
+        }
+
+        public static bool IsConnected(Socket socket)
+        {
+            try
+            {
+                socket.Send(new byte[] { 0 });
+            }
+            catch
+            {
+                return false;
+            }
+            return true;
+        }
+
+        private static void CheckModules()
+        {
+            while (true)
+            {
+                System.Threading.Thread.Sleep(3000);
+                foreach (var module in Current.Modules.ToList())
+                {
+                    if (!IsConnected(module.Socket))
+                    {
+                        File.AppendAllText(@"C:\log.txt", System.DateTime.Now.ToString() + " -> [ModuleManager] Disconnected Module: " + module.Name + " | " + module.Plugin.Name + Environment.NewLine);
+                        Current.Delete(module);
+                    }
+                }
+            }
         }
 
         private static ModuleManager _current;
@@ -36,10 +69,8 @@ namespace EniacHome.ModuleManager
 
         public void Add(Module module)
         {
-            File.AppendAllText(@"C:\log.txt", System.DateTime.Now.ToString() + " -> [ModuleManager] Adding Module: " + module.Name + " | " + module.Plugin.Name + Environment.NewLine);
-            if (ModuleManager.Current.GetModule(module.Name) == null && PluginManager.PluginManager.Current.GetPlugin(module.Plugin) != null)
+            if (ModuleManager.Current.GetModule(module.Name) == null && module.Plugin != null)
             {
-                File.AppendAllText(@"C:\log.txt", System.DateTime.Now.ToString() + " -> [ModuleManager] Added ModuleDEBUG: " + module.Name + " | " + module.Plugin.Name + Environment.NewLine);
                 Modules.Add(module);
                 File.AppendAllText(@"C:\log.txt", System.DateTime.Now.ToString() + " -> [ModuleManager] Added Module: " + module.Name + " | " + module.Plugin.Name + Environment.NewLine);
             }

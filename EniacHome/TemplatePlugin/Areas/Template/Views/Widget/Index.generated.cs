@@ -36,8 +36,8 @@ namespace ASP
         }
         public override void Execute()
         {
-WriteLiteral("<h3>Template</h3>\r\n<p>\r\n    Template for a basic plugin.\r\n</p>\r\n\r\n<p>\r\n    Paragr" +
-"aph 101\r\n</p>");
+WriteLiteral("<h3>Template</h3>\n<p>\n    Template for a basic plugin.\n</p>\n\n<p>\n    Paragraph 10" +
+"1\n</p>");
 
         }
     }

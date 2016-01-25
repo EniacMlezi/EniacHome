@@ -55,7 +55,7 @@ namespace EniacHome.Areas.Admin.Controllers
                 HttpPostedFileBase file = Request.Files[i];
                 file.SaveAs(Server.MapPath("~/plugins/") + file.FileName);
             }
-
+            PluginManager.PluginManager.Current.Reload();
             return RedirectToAction("List");
         }
     }

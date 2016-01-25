@@ -24,7 +24,7 @@ namespace EniacHome.ModuleManager
     public class ModuleFinder
     {
         // Thread signal.
-        public static ManualResetEvent allDone = new ManualResetEvent(false);
+        private static ManualResetEvent allDone = new ManualResetEvent(false);
 
         public ModuleFinder()
         {
@@ -117,8 +117,6 @@ namespace EniacHome.ModuleManager
                 else
                 {
                     AddModule(state);
-                    handler.Disconnect(true);
-                    handler.Close();
                 }
             }
         }

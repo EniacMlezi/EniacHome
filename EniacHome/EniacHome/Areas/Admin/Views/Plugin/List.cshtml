@@ -1,7 +1,11 @@
 ﻿@model IEnumerable<EniacHome.Areas.Admin.Models.PluginListViewModel>
-<script language="JavaScript" type="text/javascript" src="~/Scripts/jquery-2.1.4.min.js"></script>
-<script language="JavaScript" type="text/javascript" src="~/Scripts/upload_overlay.js"></script>
+@section scripts
+{
+    <script language="JavaScript" type="text/javascript" src="~/Scripts/jquery-2.1.4.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="~/Scripts/upload_overlay.js"></script>
+}
 @Html.AntiForgeryToken()
+@Html.Hidden("url", Url.Action("Add", "Plugin", new { area="Admin"}))
 <div class="overlay" id="overlay">
     <div class="content" id="content">
         <div class="hidden-xs dropzone" id="dropzone">Drop files here to upload</div>
