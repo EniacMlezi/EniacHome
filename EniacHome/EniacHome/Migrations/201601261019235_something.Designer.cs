@@ -7,13 +7,13 @@ namespace EniacHome.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class AccountConfirmation : IMigrationMetadata
+    public sealed partial class something : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AccountConfirmation));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(something));
         
         string IMigrationMetadata.Id
         {
-            get { return "201512111045129_AccountConfirmation"; }
+            get { return "201601261019235_something"; }
         }
         
         string IMigrationMetadata.Source

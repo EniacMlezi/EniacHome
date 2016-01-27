@@ -1,39 +1,46 @@
 ﻿@model List<EniacHome.Models.LoginViewUserModel>
 @using Microsoft.AspNet.Identity
-<script type="text/javascript">
+@section Scripts
+{
+    <script type="text/javascript" src="~/Scripts/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript">
 
-    (function () {
-        window.onresize = function () {
-            var width = $(document).width();
-            if (width < 768) {
-                $('.users-main').each(function () {
-                    //$('#imgCircle').attr('class', '');
-                    $('#wrap').attr('class', 'col-md-12');
-                });
-            } else {
-                $('.users-main').each(function () {
-                    //$('#imgCircle').attr('class', 'col-md-4');
-                    $("#wrap").attr('class', 'col-md-8');
-                });
-            }
-        };
-    }());
+        (function () {
+            window.onresize = function () {
+                var width = $(document).width();
+                if (width < 768) {
+                    $('.users-main').each(function () {
+                        //$('#imgCircle').attr('class', '');
+                        $('#wrap').attr('class', 'col-md-12');
+                    });
+                } else {
+                    $('.users-main').each(function () {
+                        //$('#imgCircle').attr('class', 'col-md-4');
+                        $("#wrap").attr('class', 'col-md-8');
+                    });
+                }
+            };
+        }());
 
-    function SubmitUser() {
-        $(this).closest('form').submit();
-    }
+        function SubmitUser() {
+            $(this).closest('form').submit();
+        }
 
-    function enter(elem) {
-        elem.style.backgroundColor = '#F8F8F8';
-    }
+        function enter(elem) {
+            elem.style.backgroundColor = '#F8F8F8';
+        }
 
-    function leave(elem) {
-        elem.style.backgroundColor = '#FFFFFF';
-    }
+        function leave(elem) {
+            elem.style.backgroundColor = '#FFFFFF';
+        }
 
-</script>
+    </script>
+}
 <div class="loginPage content">
     <h2> Login </h2>
+    <div class="pull-right">
+        <a class="btn btn-default" href="@Url.Action("ExternalLogin", "Account")">External Login</a>
+    </div>
     @Html.ValidationMessage("failedLogin", "", new { @class = "text-danger validate" })
     <div class="container-fluid ">
         @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { role = "form" }))
@@ -71,15 +78,15 @@
                                     <div class="col-xs-12">
                                         <div class="password">
                                             <div>
-                                                @Html.PasswordFor(m => m[i].Password, new { @id = i + "Box", @class = "form-control", @placeholder = "Password" })
+                                                @Html.PasswordFor(m => m[i].Password, new { @id = i + " Box", @class = "form-control pwbox", @placeholder = "Password" })
                                                 @Html.ValidationMessageFor(m => m[i].Password, "", new { @class = "text-danger validate" })
 
+                                                <script type="text/javascript" src="~/Scripts/jquery-2.1.4.min.js"></script>
                                                 <script type="text/javascript">
-                                                    (function () {
+                                                   (function () {
                                                         $('#@i Box').keydown(function (event) {
                                                             if (event.keyCode == 13) {
                                                                 $('#@i Button').submit();
-                                                                return false;
                                                             }
                                                         });
                                                     }());

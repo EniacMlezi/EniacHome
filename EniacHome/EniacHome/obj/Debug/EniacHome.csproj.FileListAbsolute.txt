@@ -299,10 +299,14 @@ C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\EniacHome\bin\Mi
 C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\EniacHome\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\EniacHome\obj\Debug\EniacHome.csprojResolveAssemblyReference.cache
 C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\EniacHome\obj\Debug\EniacHome.Migrations.Initial.resources
-C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\EniacHome\obj\Debug\EniacHome.Migrations.AddedPostalCode.resources
-C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\EniacHome\obj\Debug\EniacHome.Migrations.AccountConfirmation.resources
 C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\EniacHome\obj\Debug\EniacHome.csproj.GenerateResource.Cache
 C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\EniacHome\obj\Debug\EniacHome.dll
 C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\EniacHome\obj\Debug\EniacHome.pdb
 C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\EniacHome\bin\RazorGenerator.Mvc.dll
 C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\EniacHome\bin\WebActivatorEx.dll
+C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\EniacHome\bin\RestSharp.dll
+C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\EniacHome\bin\Twilio.Api.dll
+C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\EniacHome\bin\RestSharp.xml
+C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\EniacHome\bin\Twilio.Api.pdb
+C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\EniacHome\bin\Twilio.Api.xml
+C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\EniacHome\obj\Debug\EniacHome.Migrations.something.resources

@@ -15,6 +15,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using EniacHome.Models;
+using Twilio;
 
 namespace EniacHome
 {
@@ -55,7 +56,16 @@ namespace EniacHome
     {
         public Task SendAsync(IdentityMessage message)
         {
-            // Plug in your SMS service here to send a text message.
+            var Twilio = new TwilioRestClient(
+              System.Configuration.ConfigurationManager.AppSettings["SMSAccountIdentification"],
+              System.Configuration.ConfigurationManager.AppSettings["SMSAccountPassword"]);
+            var result = Twilio.SendMessage(
+              System.Configuration.ConfigurationManager.AppSettings["SMSAccountFrom"],
+              message.Destination, message.Body
+            );
+            //Status is one of Queued, Sending, Sent, Failed or null if the number is not valid
+            Trace.TraceInformation(result.Status);
+            //Twilio doesn't currently have an async API, so return success.
             return Task.FromResult(0);
         }
     }

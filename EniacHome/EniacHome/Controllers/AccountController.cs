@@ -114,7 +114,12 @@ namespace EniacHome.Controllers
                 ViewBag.ReturnUrl = returnUrl;
                 return View(model);
             }
+        }
 
+        [AllowAnonymous]
+        public ActionResult ExternalLogin()
+        {
+            return View();
         }
 
         //

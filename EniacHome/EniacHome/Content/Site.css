@@ -51,10 +51,16 @@ textarea {
     height: 750px;
     display: flex;
     align-items: center;
+    padding: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 3px;
 }
 
 .dropzone {
     width: 500px;
+    margin-left: auto;
+    margin-right: auto;
     height: 500px;
     border: 2px dashed #ccc;
     color: #ccc;
@@ -77,19 +83,19 @@ textarea {
     padding-top: 120px;
 }
 
-.content {
-    position: static;
-    align-content: center;
+.form-control {
+    width: auto;
+}
+
+.password .form-control {
+    margin-top: 50px;
+    width: 100%;
 }
 
 .users-main {
     height: 25rem;
     margin-top: 20px;
     margin-bottom: 20px;
-}
-
-.form-control {
-    margin-top: 50px;
 }
 
 @media(max-width:768px) {

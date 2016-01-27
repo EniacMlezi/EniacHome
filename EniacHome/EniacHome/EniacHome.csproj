@@ -69,6 +69,10 @@
       <HintPath>..\packages\RazorGenerator.Mvc.2.4.2\lib\net40\RazorGenerator.Mvc.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="RestSharp, Version=105.2.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.105.2.2\lib\net452\RestSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="SendGrid, Version=6.3.4.0, Culture=neutral, PublicKeyToken=4f047e93159395ca, processorArchitecture=MSIL">
       <HintPath>..\packages\Sendgrid.6.3.4\lib\SendGrid.dll</HintPath>
       <Private>True</Private>
@@ -140,6 +144,10 @@
     <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <Private>True</Private>
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Twilio.Api, Version=3.4.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Twilio.4.4.1\lib\3.5\Twilio.Api.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="WebActivatorEx, Version=2.0.0.0, Culture=neutral, PublicKeyToken=7b26dc2a43f6a0d4, processorArchitecture=MSIL">
       <HintPath>..\packages\WebActivatorEx.2.0.3\lib\net40\WebActivatorEx.dll</HintPath>
@@ -222,13 +230,9 @@
     <Compile Include="Migrations\201512091353049_Initial.Designer.cs">
       <DependentUpon>201512091353049_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201512091610287_AddedPostalCode.cs" />
-    <Compile Include="Migrations\201512091610287_AddedPostalCode.Designer.cs">
-      <DependentUpon>201512091610287_AddedPostalCode.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201512111045129_AccountConfirmation.cs" />
-    <Compile Include="Migrations\201512111045129_AccountConfirmation.Designer.cs">
-      <DependentUpon>201512111045129_AccountConfirmation.cs</DependentUpon>
+    <Compile Include="Migrations\201601261019235_something.cs" />
+    <Compile Include="Migrations\201601261019235_something.Designer.cs">
+      <DependentUpon>201601261019235_something.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -310,7 +314,6 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Account\_ExternalLoginsListPartial.cshtml" />
     <Content Include="Views\Account\ConfirmEmail.cshtml" />
     <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
     <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
@@ -334,6 +337,7 @@
     <Content Include="Views\Module\List.cshtml" />
     <Content Include="Views\Board\Index.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Account\ExternalLogin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -346,11 +350,8 @@
     <EmbeddedResource Include="Migrations\201512091353049_Initial.resx">
       <DependentUpon>201512091353049_Initial.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201512091610287_AddedPostalCode.resx">
-      <DependentUpon>201512091610287_AddedPostalCode.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201512111045129_AccountConfirmation.resx">
-      <DependentUpon>201512111045129_AccountConfirmation.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201601261019235_something.resx">
+      <DependentUpon>201601261019235_something.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

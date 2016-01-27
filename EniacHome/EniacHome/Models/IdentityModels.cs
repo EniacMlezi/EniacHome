@@ -23,8 +23,7 @@ namespace EniacHome.Models
         [Required]
         [EmailAddress]
         public override string Email { get; set; }
-
-        [Required]
+        
         [StringLength(50, ErrorMessage = "Last Name cannot be longer than 50 characters.")]
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
@@ -32,18 +31,15 @@ namespace EniacHome.Models
         [StringLength(50, ErrorMessage = "First name cannot be longer than 50 characters.")]
         [Display(Name = "First Name")]
         public string FirstName { get; set; }
-
-        [Required]
+        
         [StringLength(128, ErrorMessage = "Address cannot be longer than 128 characters.")]
         public string Address { get; set; }
-
-        [Required]
+        
         [DataType(DataType.PostalCode)]
         [StringLength(128, ErrorMessage = "Postal code cannot be longer than 128 characters.")]
         [Display(Name = "Postal code")]
         public string PostalCode { get; set; }
-
-        [Required]
+        
         [StringLength(128, ErrorMessage = "Country cannot be longer than 128 characters.")]
         public string Country { get; set; }
 
@@ -55,8 +51,7 @@ namespace EniacHome.Models
                 return LastName + ", " + FirstName;
             }
         }
-
-        [Required]
+        
         public bool AccountConfirmed { get; set; }
 
 

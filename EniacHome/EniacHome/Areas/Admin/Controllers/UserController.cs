@@ -147,7 +147,7 @@ namespace EniacHome.Areas.Admin.Controllers
             {
                 return Redirect(returnUrl);
             }
-            return RedirectToAction("Index", "Users");
+            return RedirectToAction("Index", "User");
         }
 
         //
