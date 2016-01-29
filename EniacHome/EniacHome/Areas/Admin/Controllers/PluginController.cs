@@ -9,6 +9,7 @@ using System.IO;
 
 namespace EniacHome.Areas.Admin.Controllers
 {
+    [Authorize(Roles = "Administrator, Moderator")]
     public class PluginController : Controller
     {
         // GET: Admin/Plugin

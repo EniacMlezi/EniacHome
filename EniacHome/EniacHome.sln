@@ -11,11 +11,15 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PluginInterface", "PluginIn
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EniacHome.ModuleManager", "EniacHome.ModuleManager\EniacHome.ModuleManager.csproj", "{83030BDE-9151-422A-A13C-35CA4D0C156A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplatePlugin", "TemplatePlugin\TemplatePlugin.csproj", "{C41814C3-A1AD-4F19-BCA2-79EFA41C6653}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LampPlugin", "LampPlugin\LampPlugin.csproj", "{5A5212B0-DCFC-498C-BA05-4458E810299D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LampModule", "LampModule\LampModule.csproj", "{9F421B94-C027-466D-8F74-6DE1B9B14403}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TcpModuleFinder", "TcpModuleFinder\TcpModuleFinder.csproj", "{D17296D2-148C-40BB-84AF-7336E6FB4C8E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EniacHome.ModuleFinderManager", "EniacHome.ModuleFinderManager\EniacHome.ModuleFinderManager.csproj", "{4C0C1936-3A52-4659-B018-1B9BA856BC36}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModuleFinderInterface", "ModuleFinderInterface\ModuleFinderInterface.csproj", "{E0D480E5-42A2-4102-BC40-99EF7FBD611F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,10 +43,6 @@ Global
 		{83030BDE-9151-422A-A13C-35CA4D0C156A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83030BDE-9151-422A-A13C-35CA4D0C156A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83030BDE-9151-422A-A13C-35CA4D0C156A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C41814C3-A1AD-4F19-BCA2-79EFA41C6653}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C41814C3-A1AD-4F19-BCA2-79EFA41C6653}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C41814C3-A1AD-4F19-BCA2-79EFA41C6653}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C41814C3-A1AD-4F19-BCA2-79EFA41C6653}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5A5212B0-DCFC-498C-BA05-4458E810299D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5A5212B0-DCFC-498C-BA05-4458E810299D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A5212B0-DCFC-498C-BA05-4458E810299D}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -51,6 +51,18 @@ Global
 		{9F421B94-C027-466D-8F74-6DE1B9B14403}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F421B94-C027-466D-8F74-6DE1B9B14403}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F421B94-C027-466D-8F74-6DE1B9B14403}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D17296D2-148C-40BB-84AF-7336E6FB4C8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D17296D2-148C-40BB-84AF-7336E6FB4C8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D17296D2-148C-40BB-84AF-7336E6FB4C8E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D17296D2-148C-40BB-84AF-7336E6FB4C8E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C0C1936-3A52-4659-B018-1B9BA856BC36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C0C1936-3A52-4659-B018-1B9BA856BC36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C0C1936-3A52-4659-B018-1B9BA856BC36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C0C1936-3A52-4659-B018-1B9BA856BC36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0D480E5-42A2-4102-BC40-99EF7FBD611F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0D480E5-42A2-4102-BC40-99EF7FBD611F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0D480E5-42A2-4102-BC40-99EF7FBD611F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0D480E5-42A2-4102-BC40-99EF7FBD611F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

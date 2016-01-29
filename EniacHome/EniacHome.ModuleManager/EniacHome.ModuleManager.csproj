@@ -7,8 +7,8 @@
     <ProjectGuid>{83030BDE-9151-422A-A13C-35CA4D0C156A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MVC_default.ModuleManager</RootNamespace>
-    <AssemblyName>MVC_default.ModuleManager</AssemblyName>
+    <RootNamespace>EniacHome.ModuleManager</RootNamespace>
+    <AssemblyName>EniacHome.ModuleManager</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -42,7 +42,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Module.cs" />
-    <Compile Include="ModuleFinder.cs" />
     <Compile Include="ModuleManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -48,7 +48,7 @@ namespace LampModule
                 Thread Receiving = new Thread(BeginReceive);
                 Receiving.Start();
             }
-            catch (Exception ex)
+            catch 
             {
                 lblError.Text = "Could not connect to server";
             }
@@ -66,6 +66,7 @@ namespace LampModule
 
         private void BeginReceive()
         {
+            Thread.CurrentThread.IsBackground = true;
             while (true)
             {
                 StateObject state = new StateObject();

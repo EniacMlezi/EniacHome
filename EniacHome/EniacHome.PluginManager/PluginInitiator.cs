@@ -81,7 +81,7 @@ namespace EniacHome.PluginManager
 
             foreach (var assembly in assemblies)
             {
-                Type type = assembly.GetTypes().Where(t => t.GetInterface(typeof(IPlugin).Name) != null).FirstOrDefault();
+                Type type = assembly.GetTypes().Where(t => typeof(IPlugin).IsAssignableFrom(t)).FirstOrDefault();
                 if (type != null)
                 {
                     File.AppendAllText(@"C:\log.txt", System.DateTime.Now.ToString() + " -> added: " + assembly.FullName + Environment.NewLine);

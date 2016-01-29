@@ -16,12 +16,11 @@ namespace EniacHome
         protected void Application_Start()
         {
             PluginManager.PluginBootstrapper.Initialize();
+            ModuleFinderManager.ModuleFinderInitiator.InitializeModuleFinders();
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
-            Thread t = new Thread(ModuleManager.ModuleFinder.StartListening);
-            t.Start();
         }
     }
 

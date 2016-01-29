@@ -215,7 +215,9 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ModuleFinderController.cs" />
     <Compile Include="Areas\Admin\Controllers\PluginController.cs" />
+    <Compile Include="Areas\Admin\Models\ModuleFinderViewModels.cs" />
     <Compile Include="Areas\Admin\Models\PluginViewModels.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Areas\Admin\Controllers\UserController.cs" />
@@ -273,6 +275,8 @@
     <Content Include="Areas\Admin\Web.config" />
     <Content Include="Areas\Admin\Views\Plugin\Details.cshtml" />
     <Content Include="Areas\Admin\Views\Plugin\List.cshtml" />
+    <Content Include="Areas\Admin\Views\ModuleFinder\List.cshtml" />
+    <Content Include="Areas\Admin\Views\ModuleFinder\Details.cshtml" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -355,6 +359,10 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\EniacHome.ModuleFinderManager\EniacHome.ModuleFinderManager.csproj">
+      <Project>{4c0c1936-3a52-4659-b018-1b9ba856bc36}</Project>
+      <Name>EniacHome.ModuleFinderManager</Name>
+    </ProjectReference>
     <ProjectReference Include="..\EniacHome.ModuleManager\EniacHome.ModuleManager.csproj">
       <Project>{83030bde-9151-422a-a13c-35ca4d0c156a}</Project>
       <Name>EniacHome.ModuleManager</Name>
@@ -362,6 +370,10 @@
     <ProjectReference Include="..\EniacHome.PluginManager\EniacHome.PluginManager.csproj">
       <Project>{3b25eff2-5b18-4e1b-ad40-982a73168f5c}</Project>
       <Name>EniacHome.PluginManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ModuleFinderInterface\ModuleFinderInterface.csproj">
+      <Project>{e0d480e5-42a2-4102-bc40-99ef7fbd611f}</Project>
+      <Name>ModuleFinderInterface</Name>
     </ProjectReference>
     <ProjectReference Include="..\PluginInterface\PluginInterface.csproj">
       <Project>{ea6b1c51-0802-4c4c-8670-dd22a547dcd3}</Project>

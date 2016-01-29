@@ -7,8 +7,8 @@
     <ProjectGuid>{EA6B1C51-0802-4C4C-8670-DD22A547DCD3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ModuleInterface</RootNamespace>
-    <AssemblyName>ModuleInterface</AssemblyName>
+    <RootNamespace>PluginInterface</RootNamespace>
+    <AssemblyName>Pluginnterface</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
