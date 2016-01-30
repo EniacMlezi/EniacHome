@@ -12,6 +12,29 @@
                 animate: true
             };
             $('.grid-stack').gridstack(options);
+
+
+            $('.grid-stack').on('change', function (e, items) {
+                var grid = save_grid();
+                $.ajax({
+                    type: "POST",
+                    url: "@Url.Action("UpdateCookie", "Board")",
+                    cache: false,
+                    data: {widgets: grid}
+            });
+            });
+
+            save_grid = function () {
+                serialized_data = _.map($('.grid-stack > .grid-stack-item:visible'), function (el) {
+                    el = $(el);
+                    return JSON.stringify( {
+                        x: el.attr('data-gs-x'),
+                        y: el.attr('data-gs-y'),
+                        Name: el.attr('id')
+                    });
+                }, this);
+                return serialized_data;
+            };
         });
     </script>
 }
@@ -23,7 +46,7 @@
 <div class="grid-stack">
     @foreach (var widget in Model.Widgets)
     {
-        <div class="grid-stack-item"
+        <div id="@widget.Title"class="grid-stack-item"
          data-gs-x=@widget.PositionX data-gs-y=@widget.PositionY
          data-gs-width=@widget.WidgetWidth data-gs-height=@widget.WidgetHeight>
             <div class="grid-stack-item-content">
