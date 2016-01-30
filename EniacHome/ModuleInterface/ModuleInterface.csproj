@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D17296D2-148C-40BB-84AF-7336E6FB4C8E}</ProjectGuid>
+    <ProjectGuid>{D7726ABA-8022-46CE-BBAA-995E0737ABDF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TcpModuleFinder</RootNamespace>
-    <AssemblyName>TcpModuleFinder</AssemblyName>
+    <RootNamespace>ModuleInterface</RootNamespace>
+    <AssemblyName>ModuleInterface</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -40,29 +40,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TcpModule.cs" />
-    <Compile Include="TcpModuleFinder.cs" />
+    <Compile Include="IModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\EniacHome.ModuleManager\EniacHome.ModuleManager.csproj">
-      <Project>{83030bde-9151-422a-a13c-35ca4d0c156a}</Project>
-      <Name>EniacHome.ModuleManager</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\EniacHome.PluginManager\EniacHome.PluginManager.csproj">
-      <Project>{3b25eff2-5b18-4e1b-ad40-982a73168f5c}</Project>
-      <Name>EniacHome.PluginManager</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ModuleFinderInterface\ModuleFinderInterface.csproj">
-      <Project>{e0d480e5-42a2-4102-bc40-99ef7fbd611f}</Project>
-      <Name>ModuleFinderInterface</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ModuleInterface\ModuleInterface.csproj">
-      <Project>{d7726aba-8022-46ce-bbaa-995e0737abdf}</Project>
-      <Name>ModuleInterface</Name>
-    </ProjectReference>
     <ProjectReference Include="..\PluginInterface\PluginInterface.csproj">
-      <Project>{EA6B1C51-0802-4C4C-8670-DD22A547DCD3}</Project>
+      <Project>{ea6b1c51-0802-4c4c-8670-dd22a547dcd3}</Project>
       <Name>PluginInterface</Name>
     </ProjectReference>
   </ItemGroup>

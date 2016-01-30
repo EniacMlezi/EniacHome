@@ -215,9 +215,11 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ModuleController.cs" />
     <Compile Include="Areas\Admin\Controllers\ModuleFinderController.cs" />
     <Compile Include="Areas\Admin\Controllers\PluginController.cs" />
     <Compile Include="Areas\Admin\Models\ModuleFinderViewModels.cs" />
+    <Compile Include="Areas\Admin\Models\ModuleViewModels.cs" />
     <Compile Include="Areas\Admin\Models\PluginViewModels.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Areas\Admin\Controllers\UserController.cs" />
@@ -345,6 +347,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Views\Module\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -374,6 +377,10 @@
     <ProjectReference Include="..\ModuleFinderInterface\ModuleFinderInterface.csproj">
       <Project>{e0d480e5-42a2-4102-bc40-99ef7fbd611f}</Project>
       <Name>ModuleFinderInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ModuleInterface\ModuleInterface.csproj">
+      <Project>{d7726aba-8022-46ce-bbaa-995e0737abdf}</Project>
+      <Name>ModuleInterface</Name>
     </ProjectReference>
     <ProjectReference Include="..\PluginInterface\PluginInterface.csproj">
       <Project>{ea6b1c51-0802-4c4c-8670-dd22a547dcd3}</Project>

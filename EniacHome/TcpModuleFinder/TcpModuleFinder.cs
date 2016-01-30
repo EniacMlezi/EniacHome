@@ -1,6 +1,7 @@
 ﻿using EniacHome.ModuleManager;
 using EniacHome.PluginManager;
 using ModuleFinderInterface;
+using ModuleInterface;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -149,8 +150,7 @@ namespace TcpModuleFinder
             string[] ModuleInfo = state.sb.ToString().Split('|');
 
             // Create the module object.
-            Module module = new Module();
-            module.Socket = state.workSocket;
+            IModule module = new TcpModule(state.workSocket);
             module.Name = ModuleInfo[0];
             module.Plugin = PluginManager.Current.GetPlugin(ModuleInfo[1].Substring(0, ModuleInfo[1].Length - 5));
 

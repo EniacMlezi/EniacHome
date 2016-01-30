@@ -21,12 +21,13 @@ namespace EniacHome.Controllers
             {
                 Title = x.Name,
                 WidgetAreaName = x.Plugin.EntryAreaName,
-                IP = x.Socket.RemoteEndPoint.ToString(),
+                Address = x.Address,
                 WidgetWidth = x.Plugin.WidgetWidth,
                 WidgetHeight = x.Plugin.WidgetHeight,
                 PositionX = (Request.Cookies["Dashboard"] == null) ? null : Request.Cookies["Dashboard"][x.Name].Split(',')[0],
                 PositionY = (Request.Cookies["Dashboard"] == null) ? null : Request.Cookies["Dashboard"][x.Name].Split(',')[1]
             }).ToList();
+            
 
             return View(new WidgetListViewModel { Widgets = widgets });
         }

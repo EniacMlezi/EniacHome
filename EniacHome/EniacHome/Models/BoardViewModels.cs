@@ -14,7 +14,7 @@ namespace EniacHome.Models
     {
         public string Title { get; set; }
         public string WidgetAreaName { get; set; }
-        public string IP { get; set; }
+        public string Address { get; set; }
         
         public string PositionX { get; set; }
         public string PositionY { get; set; }

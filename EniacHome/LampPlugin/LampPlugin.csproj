@@ -155,9 +155,17 @@
       <Project>{83030bde-9151-422a-a13c-35ca4d0c156a}</Project>
       <Name>EniacHome.ModuleManager</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ModuleInterface\ModuleInterface.csproj">
+      <Project>{d7726aba-8022-46ce-bbaa-995e0737abdf}</Project>
+      <Name>ModuleInterface</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PluginInterface\PluginInterface.csproj">
       <Project>{ea6b1c51-0802-4c4c-8670-dd22a547dcd3}</Project>
       <Name>PluginInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TcpModuleFinder\TcpModuleFinder.csproj">
+      <Project>{d17296d2-148c-40bb-84af-7336e6fb4c8e}</Project>
+      <Name>TcpModuleFinder</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

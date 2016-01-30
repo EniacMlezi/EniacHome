@@ -41,7 +41,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Module.cs" />
     <Compile Include="ModuleManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -49,6 +48,10 @@
     <ProjectReference Include="..\EniacHome.PluginManager\EniacHome.PluginManager.csproj">
       <Project>{3b25eff2-5b18-4e1b-ad40-982a73168f5c}</Project>
       <Name>EniacHome.PluginManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ModuleInterface\ModuleInterface.csproj">
+      <Project>{d7726aba-8022-46ce-bbaa-995e0737abdf}</Project>
+      <Name>ModuleInterface</Name>
     </ProjectReference>
     <ProjectReference Include="..\PluginInterface\PluginInterface.csproj">
       <Project>{ea6b1c51-0802-4c4c-8670-dd22a547dcd3}</Project>

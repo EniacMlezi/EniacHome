@@ -1,4 +1,5 @@
-﻿using PluginInterface;
+﻿using ModuleInterface;
+using PluginInterface;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -15,38 +16,25 @@ namespace EniacHome.ModuleManager
     {
         public ModuleManager()
         {
-            Modules = new List<Module>();
-            Thread Polling = new Thread(CheckModules);
-            Polling.Start();
+            Modules = new List<IModule>();
+            Thread connectedListener = new Thread(CheckConnected);
+            connectedListener.Start();
         }
 
-        public static bool IsConnected(Socket socket)
-        {
-            try
-            {
-                socket.Send(new byte[] { 0 });
-            }
-            catch
-            {
-                return false;
-            }
-            return true;
-        }
-
-        private static void CheckModules()
+        private static void CheckConnected()
         {
             while (true)
             {
                 System.Threading.Thread.Sleep(3000);
                 foreach (var module in Current.Modules.ToList())
                 {
-                    if (!IsConnected(module.Socket))
+                    if (!module.IsConnected)
                     {
                         File.AppendAllText(@"C:\log.txt", System.DateTime.Now.ToString() + " -> [ModuleManager] Disconnected Module: " + module.Name + " | " + module.Plugin.Name + Environment.NewLine);
                         Current.Delete(module);
                     }
                 }
-            }
+            } 
         }
 
         private static ModuleManager _current;
@@ -55,19 +43,19 @@ namespace EniacHome.ModuleManager
             get { return _current ?? (_current = new ModuleManager()); }
         }
 
-        internal List<Module> Modules { get; set; }
+        internal List<IModule> Modules { get; set; }
 
-        public IEnumerable<Module> GetModules()
+        public IEnumerable<IModule> GetModules()
         {
             return Modules;
         }
 
-        public Module GetModule(string name)
+        public IModule GetModule(string name)
         {
             return GetModules().Where(m => m.Name == name).FirstOrDefault();
         }
 
-        public void Add(Module module)
+        public void Add(IModule module)
         {
             if (ModuleManager.Current.GetModule(module.Name) == null && module.Plugin != null)
             {
@@ -81,7 +69,7 @@ namespace EniacHome.ModuleManager
             Delete(Modules.Where(x => x.Plugin.GetType() == plugin.GetType()));
         }
 
-        public void Delete(IEnumerable<Module> modules)
+        public void Delete(IEnumerable<IModule> modules)
         {
             foreach (var module in modules.ToList())
             {
@@ -89,7 +77,7 @@ namespace EniacHome.ModuleManager
             }
         }
 
-        public void Delete(Module module)
+        public void Delete(IModule module)
         {
             Modules.Remove(module);
         }

@@ -22,12 +22,12 @@ C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\EniacHome.Plugin
 C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\EniacHome.PluginManager\obj\Debug\EniacHome.PluginManager.csprojResolveAssemblyReference.cache
 C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\EniacHome.PluginManager\obj\Debug\MVC_default.PluginManager.dll
 C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\EniacHome.PluginManager\obj\Debug\MVC_default.PluginManager.pdb
-C:\Users\larsg\Source\Repos\EniacHome\EniacHome\EniacHome.PluginManager\bin\Debug\Microsoft.Web.Administration.dll
-C:\Users\larsg\Source\Repos\EniacHome\EniacHome\EniacHome.PluginManager\obj\Debug\EniacHome.PluginManager.csprojResolveAssemblyReference.cache
-C:\Users\larsg\Source\Repos\EniacHome\EniacHome\EniacHome.PluginManager\bin\Debug\Pluginnterface.dll
-C:\Users\larsg\Source\Repos\EniacHome\EniacHome\EniacHome.PluginManager\bin\Debug\Pluginnterface.pdb
 C:\Users\larsg\Source\Repos\EniacHome\EniacHome\EniacHome.PluginManager\bin\Debug\EniacHome.PluginManager.dll
 C:\Users\larsg\Source\Repos\EniacHome\EniacHome\EniacHome.PluginManager\bin\Debug\EniacHome.PluginManager.pdb
 C:\Users\larsg\Source\Repos\EniacHome\EniacHome\EniacHome.PluginManager\bin\Debug\BoC.Web.Mvc.PrecompiledViews.dll
+C:\Users\larsg\Source\Repos\EniacHome\EniacHome\EniacHome.PluginManager\bin\Debug\Microsoft.Web.Administration.dll
+C:\Users\larsg\Source\Repos\EniacHome\EniacHome\EniacHome.PluginManager\bin\Debug\Pluginnterface.dll
+C:\Users\larsg\Source\Repos\EniacHome\EniacHome\EniacHome.PluginManager\bin\Debug\Pluginnterface.pdb
+C:\Users\larsg\Source\Repos\EniacHome\EniacHome\EniacHome.PluginManager\obj\Debug\EniacHome.PluginManager.csprojResolveAssemblyReference.cache
 C:\Users\larsg\Source\Repos\EniacHome\EniacHome\EniacHome.PluginManager\obj\Debug\EniacHome.PluginManager.dll
 C:\Users\larsg\Source\Repos\EniacHome\EniacHome\EniacHome.PluginManager\obj\Debug\EniacHome.PluginManager.pdb

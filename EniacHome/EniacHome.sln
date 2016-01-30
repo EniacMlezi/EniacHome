@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EniacHome.ModuleFinderManag
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModuleFinderInterface", "ModuleFinderInterface\ModuleFinderInterface.csproj", "{E0D480E5-42A2-4102-BC40-99EF7FBD611F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModuleInterface", "ModuleInterface\ModuleInterface.csproj", "{D7726ABA-8022-46CE-BBAA-995E0737ABDF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{E0D480E5-42A2-4102-BC40-99EF7FBD611F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0D480E5-42A2-4102-BC40-99EF7FBD611F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E0D480E5-42A2-4102-BC40-99EF7FBD611F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7726ABA-8022-46CE-BBAA-995E0737ABDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7726ABA-8022-46CE-BBAA-995E0737ABDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7726ABA-8022-46CE-BBAA-995E0737ABDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7726ABA-8022-46CE-BBAA-995E0737ABDF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

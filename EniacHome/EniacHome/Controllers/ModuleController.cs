@@ -9,6 +9,7 @@ using PluginInterface;
 using EniacHome.PluginManager;
 using System.Collections;
 using EniacHome.ModuleManager;
+using ModuleInterface;
 
 namespace EniacHome.Controllers
 {
@@ -26,8 +27,8 @@ namespace EniacHome.Controllers
             IEnumerable<IPlugin> plugins = PluginManager.PluginManager.Current.GetPlugins();           
             IEnumerable<PluginListViewModel> pModel = plugins.Select(x => new PluginListViewModel { Title = x.Title, Author = x.Author, Version = x.Version.ToString() });
 
-            IEnumerable<Module> modules = ModuleManager.ModuleManager.Current.GetModules();
-            IEnumerable<ModuleListViewModel> mModel = modules.Select(x => new ModuleListViewModel { IP = x.Socket.RemoteEndPoint.ToString(), Name = x.Name });
+            IEnumerable<IModule> modules = ModuleManager.ModuleManager.Current.GetModules();
+            IEnumerable<ModuleListViewModel> mModel = modules.Select(x => new ModuleListViewModel { Address = x.Address, Name = x.Name });
             return View(new PluginAndModuleListViewModule { Plugins = pModel.ToList(), Modules = mModel.ToList() });
         }
     }

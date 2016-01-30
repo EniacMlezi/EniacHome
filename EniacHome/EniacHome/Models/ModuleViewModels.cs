@@ -22,6 +22,6 @@ namespace EniacHome.Models
     public class ModuleListViewModel
     {
         public string Name { get; set; }   
-        public string IP { get; set; }
+        public string Address { get; set; }
     }
 }

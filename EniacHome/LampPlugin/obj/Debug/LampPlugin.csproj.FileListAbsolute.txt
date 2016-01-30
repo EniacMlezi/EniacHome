@@ -56,9 +56,6 @@ C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\LampPlugin\bin\M
 C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\LampPlugin\bin\MVC_default.PluginManager.pdb
 C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\LampPlugin\obj\Debug\LampPlugin.dll
 C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\LampPlugin\obj\Debug\LampPlugin.pdb
-C:\Users\larsg\Source\Repos\EniacHome\EniacHome\LampPlugin\obj\Debug\LampPlugin.csprojResolveAssemblyReference.cache
-C:\Users\larsg\Source\Repos\EniacHome\EniacHome\LampPlugin\obj\Debug\LampPlugin.dll
-C:\Users\larsg\Source\Repos\EniacHome\EniacHome\LampPlugin\obj\Debug\LampPlugin.pdb
 C:\Users\larsg\Source\Repos\EniacHome\EniacHome\LampPlugin\bin\roslyn\csc.exe
 C:\Users\larsg\Source\Repos\EniacHome\EniacHome\LampPlugin\bin\roslyn\csc.exe.config
 C:\Users\larsg\Source\Repos\EniacHome\EniacHome\LampPlugin\bin\roslyn\csc.rsp
@@ -92,6 +89,7 @@ C:\Users\larsg\Source\Repos\EniacHome\EniacHome\LampPlugin\bin\LampPlugin.pdb
 C:\Users\larsg\Source\Repos\EniacHome\EniacHome\LampPlugin\bin\EniacHome.ModuleManager.dll
 C:\Users\larsg\Source\Repos\EniacHome\EniacHome\LampPlugin\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\larsg\Source\Repos\EniacHome\EniacHome\LampPlugin\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\larsg\Source\Repos\EniacHome\EniacHome\LampPlugin\bin\ModuleInterface.dll
 C:\Users\larsg\Source\Repos\EniacHome\EniacHome\LampPlugin\bin\Pluginnterface.dll
 C:\Users\larsg\Source\Repos\EniacHome\EniacHome\LampPlugin\bin\RazorGenerator.Mvc.dll
 C:\Users\larsg\Source\Repos\EniacHome\EniacHome\LampPlugin\bin\System.Web.Helpers.dll
@@ -100,9 +98,16 @@ C:\Users\larsg\Source\Repos\EniacHome\EniacHome\LampPlugin\bin\System.Web.Razor.
 C:\Users\larsg\Source\Repos\EniacHome\EniacHome\LampPlugin\bin\System.Web.Webpages.Deployment.dll
 C:\Users\larsg\Source\Repos\EniacHome\EniacHome\LampPlugin\bin\System.Web.Webpages.dll
 C:\Users\larsg\Source\Repos\EniacHome\EniacHome\LampPlugin\bin\System.Web.Webpages.Razor.dll
+C:\Users\larsg\Source\Repos\EniacHome\EniacHome\LampPlugin\bin\TcpModuleFinder.dll
 C:\Users\larsg\Source\Repos\EniacHome\EniacHome\LampPlugin\bin\WebActivatorEx.dll
+C:\Users\larsg\Source\Repos\EniacHome\EniacHome\LampPlugin\bin\ModuleFinderInterface.dll
+C:\Users\larsg\Source\Repos\EniacHome\EniacHome\LampPlugin\bin\EniacHome.PluginManager.dll
+C:\Users\larsg\Source\Repos\EniacHome\EniacHome\LampPlugin\bin\Microsoft.Web.Administration.dll
+C:\Users\larsg\Source\Repos\EniacHome\EniacHome\LampPlugin\bin\BoC.Web.Mvc.PrecompiledViews.dll
 C:\Users\larsg\Source\Repos\EniacHome\EniacHome\LampPlugin\bin\EniacHome.ModuleManager.pdb
+C:\Users\larsg\Source\Repos\EniacHome\EniacHome\LampPlugin\bin\ModuleInterface.pdb
 C:\Users\larsg\Source\Repos\EniacHome\EniacHome\LampPlugin\bin\Pluginnterface.pdb
+C:\Users\larsg\Source\Repos\EniacHome\EniacHome\LampPlugin\bin\TcpModuleFinder.pdb
 C:\Users\larsg\Source\Repos\EniacHome\EniacHome\LampPlugin\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\larsg\Source\Repos\EniacHome\EniacHome\LampPlugin\bin\System.Web.Razor.xml
 C:\Users\larsg\Source\Repos\EniacHome\EniacHome\LampPlugin\bin\System.Web.Webpages.xml
@@ -110,3 +115,8 @@ C:\Users\larsg\Source\Repos\EniacHome\EniacHome\LampPlugin\bin\System.Web.Webpag
 C:\Users\larsg\Source\Repos\EniacHome\EniacHome\LampPlugin\bin\System.Web.Webpages.Razor.xml
 C:\Users\larsg\Source\Repos\EniacHome\EniacHome\LampPlugin\bin\System.Web.Helpers.xml
 C:\Users\larsg\Source\Repos\EniacHome\EniacHome\LampPlugin\bin\System.Web.Mvc.xml
+C:\Users\larsg\Source\Repos\EniacHome\EniacHome\LampPlugin\bin\ModuleFinderInterface.pdb
+C:\Users\larsg\Source\Repos\EniacHome\EniacHome\LampPlugin\bin\EniacHome.PluginManager.pdb
+C:\Users\larsg\Source\Repos\EniacHome\EniacHome\LampPlugin\obj\Debug\LampPlugin.csprojResolveAssemblyReference.cache
+C:\Users\larsg\Source\Repos\EniacHome\EniacHome\LampPlugin\obj\Debug\LampPlugin.dll
+C:\Users\larsg\Source\Repos\EniacHome\EniacHome\LampPlugin\obj\Debug\LampPlugin.pdb

@@ -29,4 +29,3 @@ C:\Users\larsg\Source\Repos\EniacHome\EniacHome\PluginInterface\bin\Debug\Plugin
 C:\Users\larsg\Source\Repos\EniacHome\EniacHome\PluginInterface\bin\Debug\Pluginnterface.pdb
 C:\Users\larsg\Source\Repos\EniacHome\EniacHome\PluginInterface\obj\Debug\Pluginnterface.dll
 C:\Users\larsg\Source\Repos\EniacHome\EniacHome\PluginInterface\obj\Debug\Pluginnterface.pdb
-C:\Users\larsg\Source\Repos\EniacHome\EniacHome\PluginInterface\obj\Debug\PluginInterface.csprojResolveAssemblyReference.cache

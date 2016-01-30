@@ -7,6 +7,8 @@ using System.Web.Mvc;
 using EniacHome.ModuleManager;
 using EniacHome.Plugins.LampPlugin.Models;
 using System.Net.Sockets;
+using ModuleInterface;
+using TcpModuleFinder;
 
 namespace EniacHome.Plugins.LampPlugin.Controllers
 {
@@ -14,7 +16,7 @@ namespace EniacHome.Plugins.LampPlugin.Controllers
     {
         public ActionResult Index(string id)
         {
-            Module module =  ModuleManager.ModuleManager.Current.GetModule(id);
+            TcpModule module =  ModuleManager.ModuleManager.Current.GetModule(id) as TcpModule;
             Socket handler = module.Socket;
 
             string value = "";
