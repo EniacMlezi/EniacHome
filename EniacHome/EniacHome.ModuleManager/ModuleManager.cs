@@ -77,6 +77,11 @@ namespace EniacHome.ModuleManager
             }
         }
 
+        public void Delete(string name)
+        {
+            Delete(GetModule(name));
+        }
+
         public void Delete(IModule module)
         {
             Modules.Remove(module);

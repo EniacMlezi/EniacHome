@@ -1,7 +1,7 @@
-﻿using System;
+﻿using EniacHome.Areas.Admin.Models;
+using ModuleInterface;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace EniacHome.Areas.Admin.Controllers
@@ -16,8 +16,15 @@ namespace EniacHome.Areas.Admin.Controllers
 
         public ActionResult List()
         {
+            IEnumerable<IModule> modules = ModuleManager.ModuleManager.Current.GetModules();
+            IEnumerable<ModuleListViewModel> model = modules.Select(x => new ModuleListViewModel { Address = x.Address, Name = x.Name });
+            return View(model);
+        }
 
-            return View();
+        public ActionResult Delete(string Name)
+        {
+            ModuleManager.ModuleManager.Current.Delete(Name);
+            return RedirectToAction("List");
         }
     }
 }

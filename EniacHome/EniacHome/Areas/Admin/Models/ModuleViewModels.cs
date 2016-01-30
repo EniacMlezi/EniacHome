@@ -5,7 +5,9 @@ using System.Web;
 
 namespace EniacHome.Areas.Admin.Models
 {
-    public class ModuleListViewModule
+    public class ModuleListViewModel
     {
+        public string Name { get; set; }
+        public string Address { get; set; }
     }
 }
