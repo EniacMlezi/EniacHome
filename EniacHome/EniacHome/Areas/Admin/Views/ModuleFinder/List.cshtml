@@ -1,0 +1,94 @@
+﻿@model IEnumerable<EniacHome.Areas.Admin.Models.ModuleFinderDetailsViewModel>
+@section scripts
+{
+    <script language="JavaScript" type="text/javascript" src="~/Scripts/jquery-2.1.4.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="~/Scripts/upload_overlay.js"></script>
+    <script>
+            var toggleListening = function (name) {
+
+                var formData = { 
+                    Name: name,
+                    __RequestVerificationToken : $('input[name=__RequestVerificationToken]').val()
+                };
+
+                $.ajax({
+                    url: '@Url.Action("ToggleListening", "ModuleFinder")',
+                    type: "POST",
+                    data: formData,
+                    success: function (data, textStatus, jqXHR) {
+                        //data - response from server
+                        alert('successfull request' + data);
+
+                    },
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        alert('error' + errorThrown);
+                    }
+                });
+            };
+    </script>
+
+}
+@Html.AntiForgeryToken()
+@Html.Hidden("url", Url.Action("Add", "ModuleFinder", new { area = "Admin" }))
+<div class="overlay" id="overlay">
+    <div class="content" id="content">
+        <div class="hidden-xs dropzone" id="dropzone">Drop files here to upload</div>
+        <div class="visible-xs center-block">
+            <p>
+                @using (Html.BeginForm("Add", "ModuleFinder", FormMethod.Post, new { id = "upload", enctype = "multipart/form-data" }))
+                {
+                    <span class="btn btn-default btn-file">
+                        Browse<input type="file" name="files" id="FileInput" multiple="multiple" />
+                    </span>
+                }
+            </p>
+        </div>
+    </div>
+</div>
+<div class="table-responsive">
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Author)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Version)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsListening)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Author)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Version)
+                </td>
+                <td>
+                    @Html.CheckBoxFor(modelItem => item.IsListening, new { onclick="toggleListening('" + @item.Name + "')"} )
+                </td>
+                <td>
+                    @Html.ActionLink("Details", "Details", new { Name = item.Name }) |
+                    @Html.ActionLink("Delete", "Delete", new { Name = item.Name })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
+<p>
+    <button class="btn btn-default" id="addBtn">
+        <span class="glyphicon glyphicon-plus pull-left"></span>&nbsp; &nbsp; Add New ModuleFinder
+    </button>
+</p>
