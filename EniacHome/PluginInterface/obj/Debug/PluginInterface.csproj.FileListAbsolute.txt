@@ -20,12 +20,12 @@ C:\Users\larsg\Desktop\EniacHome\PluginInterface\bin\Debug\ModuleInterface.dll
 C:\Users\larsg\Desktop\EniacHome\PluginInterface\bin\Debug\ModuleInterface.pdb
 C:\Users\larsg\Desktop\EniacHome\PluginInterface\obj\Debug\ModuleInterface.dll
 C:\Users\larsg\Desktop\EniacHome\PluginInterface\obj\Debug\ModuleInterface.pdb
-C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\PluginInterface\bin\Debug\ModuleInterface.dll
-C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\PluginInterface\bin\Debug\ModuleInterface.pdb
 C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\PluginInterface\obj\Debug\PluginInterface.csprojResolveAssemblyReference.cache
-C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\PluginInterface\obj\Debug\ModuleInterface.dll
-C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\PluginInterface\obj\Debug\ModuleInterface.pdb
 C:\Users\larsg\Source\Repos\EniacHome\EniacHome\PluginInterface\bin\Debug\Pluginnterface.dll
 C:\Users\larsg\Source\Repos\EniacHome\EniacHome\PluginInterface\bin\Debug\Pluginnterface.pdb
 C:\Users\larsg\Source\Repos\EniacHome\EniacHome\PluginInterface\obj\Debug\Pluginnterface.dll
 C:\Users\larsg\Source\Repos\EniacHome\EniacHome\PluginInterface\obj\Debug\Pluginnterface.pdb
+C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\PluginInterface\bin\Debug\Pluginnterface.dll
+C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\PluginInterface\bin\Debug\Pluginnterface.pdb
+C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\PluginInterface\obj\Debug\Pluginnterface.dll
+C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\PluginInterface\obj\Debug\Pluginnterface.pdb

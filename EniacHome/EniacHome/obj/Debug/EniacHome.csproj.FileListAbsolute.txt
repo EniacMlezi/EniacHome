@@ -251,8 +251,6 @@ C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\EniacHome\bin\Mi
 C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\EniacHome\bin\Microsoft.Owin.Security.Twitter.dll
 C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\EniacHome\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\EniacHome\bin\ModuleInterface.dll
-C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\EniacHome\bin\MVC_default.ModuleManager.dll
-C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\EniacHome\bin\MVC_default.PluginManager.dll
 C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\EniacHome\bin\Newtonsoft.Json.dll
 C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\EniacHome\bin\Owin.dll
 C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\EniacHome\bin\SendGrid.dll
@@ -269,8 +267,6 @@ C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\EniacHome\bin\Sy
 C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\EniacHome\bin\WebGrease.dll
 C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\EniacHome\bin\Microsoft.Web.Administration.dll
 C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\EniacHome\bin\BoC.Web.Mvc.PrecompiledViews.dll
-C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\EniacHome\bin\MVC_default.ModuleManager.pdb
-C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\EniacHome\bin\MVC_default.PluginManager.pdb
 C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\EniacHome\bin\ModuleInterface.pdb
 C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\EniacHome\bin\Antlr3.Runtime.pdb
 C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\EniacHome\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
@@ -424,3 +420,13 @@ C:\Users\larsg\Source\Repos\EniacHome\EniacHome\EniacHome\obj\Debug\EniacHome.Mi
 C:\Users\larsg\Source\Repos\EniacHome\EniacHome\EniacHome\obj\Debug\EniacHome.csproj.GenerateResource.Cache
 C:\Users\larsg\Source\Repos\EniacHome\EniacHome\EniacHome\obj\Debug\EniacHome.dll
 C:\Users\larsg\Source\Repos\EniacHome\EniacHome\EniacHome\obj\Debug\EniacHome.pdb
+C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\EniacHome\bin\EniacHome.ModuleFinderManager.dll
+C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\EniacHome\bin\EniacHome.ModuleManager.dll
+C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\EniacHome\bin\EniacHome.PluginManager.dll
+C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\EniacHome\bin\ModuleFinderInterface.dll
+C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\EniacHome\bin\Pluginnterface.dll
+C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\EniacHome\bin\EniacHome.ModuleFinderManager.pdb
+C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\EniacHome\bin\EniacHome.ModuleManager.pdb
+C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\EniacHome\bin\EniacHome.PluginManager.pdb
+C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\EniacHome\bin\ModuleFinderInterface.pdb
+C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\EniacHome\bin\Pluginnterface.pdb

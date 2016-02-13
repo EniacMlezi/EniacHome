@@ -8,6 +8,7 @@ namespace ModuleInterface
         string Address { get; set; }
         bool IsConnected { get; }
 
+        void Disconnect();
         IPlugin Plugin { get; set; }
     }
 }

@@ -84,6 +84,7 @@ namespace EniacHome.ModuleManager
 
         public void Delete(IModule module)
         {
+            module.Disconnect();
             Modules.Remove(module);
         }
     }

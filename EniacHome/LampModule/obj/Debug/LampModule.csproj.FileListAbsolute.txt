@@ -16,3 +16,12 @@ C:\Users\larsg\Source\Repos\EniacHome\EniacHome\LampModule\obj\Debug\LampModule.
 C:\Users\larsg\Source\Repos\EniacHome\EniacHome\LampModule\obj\Debug\LampModule.csproj.GenerateResource.Cache
 C:\Users\larsg\Source\Repos\EniacHome\EniacHome\LampModule\obj\Debug\LampModule.exe
 C:\Users\larsg\Source\Repos\EniacHome\EniacHome\LampModule\obj\Debug\LampModule.pdb
+C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\LampModule\bin\Debug\LampModule.exe.config
+C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\LampModule\bin\Debug\LampModule.exe
+C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\LampModule\bin\Debug\LampModule.pdb
+C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\LampModule\obj\Debug\LampModule.csprojResolveAssemblyReference.cache
+C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\LampModule\obj\Debug\LampModule.StateObject.resources
+C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\LampModule\obj\Debug\LampModule.Properties.Resources.resources
+C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\LampModule\obj\Debug\LampModule.csproj.GenerateResource.Cache
+C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\LampModule\obj\Debug\LampModule.exe
+C:\Users\larsg\Documents\GitHubVisualStudio\EniacHome\EniacHome\LampModule\obj\Debug\LampModule.pdb

@@ -13,14 +13,14 @@ namespace TcpModuleFinder
     {
         public TcpModule(Socket socket)
         {
-            this.Socket = socket;
+            this.socket = socket;
         }
 
         public string Address
         {
             get
             {
-                return Socket.RemoteEndPoint.ToString();
+                return socket.RemoteEndPoint.ToString();
             }
 
             set
@@ -31,7 +31,7 @@ namespace TcpModuleFinder
 
         public string Name { get; set; }
 
-        public bool IsConnected { get { return isConnected(this.Socket); } }
+        public bool IsConnected { get { return isConnected(this.socket); } }
 
         public static bool isConnected(Socket socket)
         {
@@ -46,8 +46,14 @@ namespace TcpModuleFinder
             return true;
         }
 
+        public void Disconnect()
+        {
+            socket.Disconnect(false);
+            this.socket.Close();
+        }
+
         public IPlugin Plugin { get; set; }
 
-        public Socket Socket { get; set; }
+        public Socket socket { get; set; }
     }
 }

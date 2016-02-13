@@ -17,7 +17,7 @@ namespace EniacHome.Plugins.LampPlugin.Controllers
         public ActionResult Index(string id)
         {
             TcpModule module =  ModuleManager.ModuleManager.Current.GetModule(id) as TcpModule;
-            Socket handler = module.Socket;
+            Socket handler = module.socket;
 
             string value = "";
             byte[] message = Encoding.ASCII.GetBytes("get<EOF>");
