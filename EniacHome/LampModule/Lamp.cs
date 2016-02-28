@@ -80,33 +80,43 @@ namespace LampModule
             try
             {
                 bytesRead = Socket.Receive(state.buffer, Socket.Available, SocketFlags.None);
+                if (bytesRead > 0)
+                {
+                    state.sb.Append(Encoding.ASCII.GetString(state.buffer, 0, bytesRead));
+                    String content = state.sb.ToString();
+                    if (!(content.IndexOf("<EOF>") > -1))
+                    {
+                        Receive(state);
+                    }
+                    else
+                    {
+                        Process(state.sb.ToString());
+                    }
+                }
             }
             catch
             {
                 Disconnect();
-                lblError.Text = "Server Disconnected";
-            }
-
-            if (bytesRead > 0)
-            {
-                state.sb.Append(Encoding.ASCII.GetString(state.buffer, 0, bytesRead));
-                String content = state.sb.ToString();
-                if (!(content.IndexOf("<EOF>") > -1))
-                {
-                    Receive(state);
-                }
-                else
-                {
-                    Process(state.sb.ToString());
-                }
             }
         }
 
         private void Disconnect()
         {
-            Socket.Shutdown(SocketShutdown.Both);
-            Socket.Disconnect(false);
-            Socket.Close();
+            try
+            {
+                Socket.Shutdown(SocketShutdown.Both);
+                Socket.Disconnect(false);
+                Socket.Close();
+            }
+            catch { }
+            finally
+            {
+                MethodInvoker inv = delegate
+                {
+                    this.lblError.Text = "Server Disconnected";
+                };
+                this.Invoke(inv);
+            }
         }
 
         private void Process(string Received)

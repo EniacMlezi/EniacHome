@@ -18,10 +18,6 @@
         }
     };
 
-    document.getElementById("FileInput").onchange = function (e) {
-        upload(this.files);
-    };
-
     $('#addBtn').on('click', function (e) {
         $('#overlay').css({
             'display': 'flex'
@@ -36,32 +32,37 @@
         });
     });
 
-    $('#overlay').on('dragover drop dragdrop', function (e) {
+    document.getElementById("FileInput").onchange = function (e) {
+        upload(this.files);
+    };
+    
+    $("#overlay").on('dragover', function (e) {
         e.preventDefault();
     });
-
+    $('#overlay').on('drop dragdrop', function (e) {
+        e.preventDefault();
+    });
     $("div > div", "#overlay").on('drop dragdrop', function (event) {
         $(this).css({
             'color': '#ccc',
             'border-color': '#ccc'
         });
-
         upload(event.originalEvent.dataTransfer.files);
     });
-
-    $("div > div", "#overlay").on('dragleave', function (event) {
-        event.preventDefault();
-        $(this).css({
-            'color': '#ccc',
-            'border-color': '#ccc'
-        });
-    });
-
     $("div > div", "#overlay").on('dragenter', function (event) {
         event.preventDefault();
         $(this).css({
             'color': '#000',
             'border-color': '#000'
         });
+    });
+    $("div > div", "#overlay").on('dragleave', function () {
+        $(this).css({
+            'color': '#ccc',
+            'border-color': '#ccc'
+        });
+    });
+    $("div > div", "#overlay").on('dragover', function (e) {
+        e.preventDefault();
     });
 });
